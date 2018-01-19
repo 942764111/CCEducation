@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "56595029-6b60-49cc-b1bb-2246f201e7aa",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "关卡界面场景-效果图": {
+      "ver": "1.0.3",
+      "uuid": "72f73ebb-663a-4da8-aeb6-bf5daf84f0ea",
+      "rawTextureUuid": "56595029-6b60-49cc-b1bb-2246f201e7aa",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1920,
+      "height": 1080,
+      "rawWidth": 1920,
+      "rawHeight": 1080,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

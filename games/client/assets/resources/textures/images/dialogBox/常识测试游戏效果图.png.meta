@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "9d685774-ea53-438f-b04d-9e0f150bd738",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "常识测试游戏效果图": {
+      "ver": "1.0.3",
+      "uuid": "84a1ef0d-f7c0-4031-a1f1-3aa557774acf",
+      "rawTextureUuid": "9d685774-ea53-438f-b04d-9e0f150bd738",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1920,
+      "height": 1080,
+      "rawWidth": 1920,
+      "rawHeight": 1080,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

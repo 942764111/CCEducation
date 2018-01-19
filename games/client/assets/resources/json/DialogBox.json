@@ -1,0 +1,65 @@
+{
+  "1": {
+    "id": 1,
+    "isshowRoleAI": 0,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "报告博士，能源探测仪发现前方的星球有能源反应，我们已经接近航线设定的第一个目的地“尼克尔星” ",
+    "next": 2
+  },
+  "2": {
+    "id": 2,
+    "isshowRoleAI": 1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "好！进入尼克尔星轨道，我来挑选一个小队进行考察任务。 ",
+    "next": 3
+  },
+  "3": {
+    "id": 3,
+    "isshowRoleAI": 1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "精英小队全体集合！",
+    "next": 4
+  },
+  "4": {
+    "id": 4,
+    "isshowRoleAI": 1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "接下来我会挑选一些成员进行第一次探险任务！",
+    "next": 5
+  },
+  "5": {
+    "id": 5,
+    "isshowRoleAI": 1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "就靠测试你们常识手册背诵成绩来决定！",
+    "next": 6
+  },
+  "6": {
+    "id": 6,
+    "isshowRoleAI": 1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "开始出题！",
+    "next": "One"
+  },
+  "7": {
+    "id": 7,
+    "isshowRoleAI": 1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "看样子你常识手册背诵的不是很好啊，正确答案是（显示正确选项）",
+    "next": 6
+  },
+  "8": {
+    "id": 8,
+    "isshowRoleAI": 1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "很好！精彩的回答！",
+    "next": 6
+  },
+  "9": {
+    "id": 9,
+    "isshowRoleAI": 1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "很好！你通过了测试！检修好飞行器，准备执行探索任务！",
+    "next": "Exit"
+  }
+}

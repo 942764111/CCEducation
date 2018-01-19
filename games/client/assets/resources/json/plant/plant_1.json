@@ -1,0 +1,272 @@
+{
+  "1": {
+    "id": 1,
+    "leftid": -1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "报告博士，能源探测仪发现前方的星球有能源反应，我们已经接近航线设定的第一个目的地“尼克尔星” ",
+    "next": 2,
+    "save": null,
+    "reward": 0
+  },
+  "2": {
+    "id": 2,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "好！进入尼克尔星轨道，我来挑选一个小队进行考察任务。 ",
+    "next": 3,
+    "save": null,
+    "reward": 0
+  },
+  "3": {
+    "id": 3,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "精英小队全体集合！",
+    "next": 4,
+    "save": null,
+    "reward": 0
+  },
+  "4": {
+    "id": 4,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "接下来我会挑选一些成员进行第一次探险任务！",
+    "next": 5,
+    "save": null,
+    "reward": 0
+  },
+  "5": {
+    "id": 5,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "就靠测试你们常识手册背诵成绩来决定！",
+    "next": 6,
+    "save": null,
+    "reward": 0
+  },
+  "6": {
+    "id": 6,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "开始出题！",
+    "next": "callback_1_6",
+    "save": null,
+    "reward": 0
+  },
+  "7": {
+    "id": 7,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "注意，下一题！",
+    "next": "callback_1_6",
+    "save": null,
+    "reward": 0
+  },
+  "8": {
+    "id": 8,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "看样子你常识手册背诵的不是很好啊，正确答案是{1}",
+    "next": 7,
+    "save": null,
+    "reward": 0
+  },
+  "9": {
+    "id": 9,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "很好！精彩的回答！",
+    "next": 7,
+    "save": null,
+    "reward": 0
+  },
+  "10": {
+    "id": 10,
+    "leftid": 1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "很好！你通过了测试！检修好飞行器，准备执行探索任务！",
+    "next": "Exit",
+    "save": 10,
+    "reward": 0
+  },
+  "11": {
+    "id": 11,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "我得首先检修一下飞船的状态，确保万无一失",
+    "next": 11,
+    "save": null,
+    "reward": 0
+  },
+  "12": {
+    "id": 12,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "根据维修手册的指示，我需要根据检测仪的提示来完成功能检修。 ",
+    "next": 12,
+    "save": null,
+    "reward": 0
+  },
+  "13": {
+    "id": 13,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "检测仪提示了颜色和顺序",
+    "next": 13,
+    "save": null,
+    "reward": 0
+  },
+  "14": {
+    "id": 14,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "我要根据这个顺序来检测相应的功能",
+    "next": 16,
+    "save": null,
+    "reward": 0
+  },
+  "15": {
+    "id": 15,
+    "leftid": -1,
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "注意提示！",
+    "next": "callback",
+    "save": null,
+    "reward": 0
+  },
+  "16": {
+    "id": 16,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "好，现在开始检修。",
+    "next": "callback",
+    "save": null,
+    "reward": 0
+  },
+  "17": {
+    "id": 17,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "嗯？好像没有按照检测仪来检测，飞船功能没有激活。",
+    "next": 15,
+    "save": null,
+    "reward": 0
+  },
+  "18": {
+    "id": 18,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "很好，继续下一步检测。",
+    "next": 15,
+    "save": null,
+    "reward": 0
+  },
+  "19": {
+    "id": 19,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "看样子飞船的各个功能都没有问题，准备进入尼克尔星！",
+    "next": "Exit",
+    "save": 18,
+    "reward": 0
+  },
+  "20": {
+    "id": 20,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "这里就是尼克尔星啊！",
+    "next": 19,
+    "save": null,
+    "reward": 0
+  },
+  "21": {
+    "id": 21,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "对了，博士交代过，首先需要收集星球样本。",
+    "next": 20,
+    "save": null,
+    "reward": 0
+  },
+  "22": {
+    "id": 22,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "操作手册上提示了需要收集的样本数量。",
+    "next": 21,
+    "save": null,
+    "reward": 0
+  },
+  "23": {
+    "id": 23,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "我需要根据样本数量来携带正好的收集器皿。",
+    "next": 22,
+    "save": null,
+    "reward": 0
+  },
+  "24": {
+    "id": 24,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "下一个样本要求是……",
+    "next": "callback",
+    "save": null,
+    "reward": 0
+  },
+  "25": {
+    "id": 25,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "很好！我来看看手册的要求。",
+    "next": "callback",
+    "save": null,
+    "reward": 0
+  },
+  "26": {
+    "id": 26,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "嗯？好像带的器皿数量不对？",
+    "next": 24,
+    "save": null,
+    "reward": 0
+  },
+  "27": {
+    "id": 27,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "没问题！带的采集工具数量都对了！",
+    "next": 24,
+    "save": null,
+    "reward": 0
+  }
+}
