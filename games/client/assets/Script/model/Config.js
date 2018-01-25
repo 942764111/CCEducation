@@ -8,13 +8,22 @@ CG.DIALOG_INDEX = 1,
 
 
 CG.DIALOG_CONSTANT = {
-    "One":{"index":0,"Maxindex":3,"random_scope":[
+    "callback_1_1":{"index":0,"Maxindex":3,"random_scope":[
         "1,3",
         "4,17"
-    ]}
+    ]},
+    "callback_1_2":{"index":0,"Maxindex":3},
+    "GAME_RUN_STATE":{
+        INIT : 1, // 初始化
+        RUN  : 2, // 游戏中
+        RWFEESH : 3, // 重新开始
+        OVER : 4,//游戏结束
+    }
 }
 
-
+/**
+ * 初始化角色的ID
+ */
 CG.INIT_SELECT_ROLEID = ["2","3","4"];
 
 CG.INIT_JSON = function(){
@@ -45,6 +54,36 @@ CG.INIT_JSON = function(){
     GN.Obj.getFileJSON("plant/plant_1.json",function(data){
         CG.PLANT_1_JSON = data;
     });
+
+
+
+    //====================game_1_3 begin
+    /**
+     *  1星球    3关卡    控制表
+     */
+    GN.Obj.getFileJSON("games/game_1_3.json",function(data){
+        CG.GAME_1_3_JSON = data;
+    });
+
+
+    /**
+     *   1星球    3关卡    上方物品表
+     */
+    GN.Obj.getFileJSON("games/game_1_3_d1.json",function(data){
+        CG.GAME_1_3_D1_JSON = data;
+    });
+
+    /**
+     *   1星球    3关卡    右方物品表
+     */
+    GN.Obj.getFileJSON("games/game_1_3_d2.json",function(data){
+        CG.GAME_1_3_D2_JSON = data;
+    });
+
+    //====================game_1_3 end
+
+
+
 
 }
 

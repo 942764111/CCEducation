@@ -45,7 +45,7 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0,
-    "autoReleaseAssets": null
+    "autoReleaseAssets": {}
   },
   {
     "__type__": "cc.Node",
@@ -111,7 +111,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "node",
+    "_name": "Node",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2

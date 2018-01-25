@@ -142,12 +142,13 @@ app.get('/register',function(req,res){
 });
 
 //更新用户关卡索引ID
-app.get('/dialogindex',function(req,res){
+app.get('/updatePlantindex',function(req,res){
     var account = req.query.account;
-    var dialogindex = req.query.dialogindex;
+    var plantindex = req.query.plantindex;
+    var plantpassindex = req.query.plantpassindex;
     var sign = req.query.sign;
     //判断是否为空
-    if(account == "" || dialogindex == "" || sign==""){
+    if(account == "" || plantindex == "" || sign=="" || plantpassindex==""){
         send(res,{code : 1 ,msg :"account or password is null"});
         return;
     }
@@ -158,12 +159,12 @@ app.get('/dialogindex',function(req,res){
         send(res,{code : 1 ,msg :"the sign is error"});
         return;
     }
-    userLogic.updateDialogindex(dialogindex,account,function(has){
+    userLogic.updatePlantindex(plantindex,plantpassindex,account,function(has){
         if(!has){
-            send(res,{code : 1, msg : "update dialogindex happened error"});
+            send(res,{code : 1, msg : "update plantindex or plantpassindex happened error"});
             return;
         }
-            send(res,{code : 0, msg : "ok",userinfo:{"dialogindex":dialogindex}});
+            send(res,{code : 0, msg : "ok"});
     });
 });
 

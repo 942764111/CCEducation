@@ -105,7 +105,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "node",
+    "_name": "Node",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2

@@ -30,14 +30,18 @@ exports.updateInfo = function(role,username,account, callback){
     })
 };
 
-//更新用户关卡索引ID
-exports.updateDialogindex = function(dialogindex,account, callback){
+//更新用户星球和星球关卡ID
+/**
+    plantindex:         目前用户处在哪个星球关卡
+    plantpassindex:     用户星球中得关卡索引ID 
+*/
+exports.updatePlantindex = function(plantindex,plantpassindex,account, callback){
     callback = callback == null ? nop : callback;
-    if(account == null || dialogindex == null){
+    if(account == null || plantindex == null || plantpassindex ==null){
         callback(null);
         return;
     }
-    var sql = 'update user set  dialogindex = "'+dialogindex+'" where account = "'+account+'"';
+    var sql = 'update user set  plantindex = "'+plantindex+'",plantpassindex = "'+plantpassindex+'" where account = "'+account+'"';
     db.query(sql,function(err,rows,fields){
         if(err){
                 if(err.code == 'ER_DUP_ENTRY'){

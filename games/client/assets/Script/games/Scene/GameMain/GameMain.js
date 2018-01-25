@@ -20,16 +20,20 @@ cc.Class({
             self.show_Role.getComponent(cc.Sprite).spriteFrame = data;
         });
 
-
-
         cc.vv.PublicUI.create_UserinfoBox();
+    },
+    start(){
+        cc.log(this.node.getComponent("GameMain"));
+    },
+    _test : function(){
+        cc.log("_test")
     },
     onLoadScene(e,eventid){
 
         function loadScene(scenename){
             cc.director.loadScene(scenename);
         }
-        console.log(this);
+
         switch(eventid){
             case "explore"://探索
                 loadScene("Explore");

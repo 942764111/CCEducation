@@ -89,7 +89,9 @@ cc.Class({
                     cc.vv.Userinfo["role"] =  data["role"];
                     cc.director.loadScene("GameMain");
                 }else{
-                    cc.vv.PublicUI.create_SelectBox(data.msg);
+                    cc.vv.PublicUI.create_SelectBox({
+                        "txt":data.msg
+                    });
                 }
             }
 

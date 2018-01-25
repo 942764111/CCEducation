@@ -30,6 +30,49 @@ cc.Class({
 
     },
 
+    setInfo(plantpassindex){
+        var self = this;
+        var data =self._getplantData(cc.vv.Userinfo["plantindex"]);
+
+        function setshowRole(roletype){
+           var getroleobj = roletype=="left"?self.left_role:self.rightid_role
+                     ,roleid = roletype=="left"?"leftid":"rightid";
+            var roleres;
+            if(data[plantpassindex][roleid]=="self"){ //自己
+
+                getroleobj.active = true;
+                roleres = cc.vv.CG.ROLE_JSON[cc.vv.Userinfo["role"]]["img"];
+                cc.loader.loadRes('textures/images/Role/'+roleres, cc.SpriteFrame, function (err, data) {
+                    if (err) {
+                        cc.error(err.message || err);
+                        return;
+                    }
+                    getroleobj.getComponent(cc.Sprite).spriteFrame  = data;
+                });
+
+            }else if(data[plantpassindex][roleid]>0){ //role ID
+
+                getroleobj.active = true;
+                roleres = cc.vv.CG.ROLE_JSON[data[plantpassindex][roleid]]["img"];
+                cc.loader.loadRes('textures/images/Role/'+roleres, cc.SpriteFrame, function (err, data) {
+                    if (err) {
+                        cc.error(err.message || err);
+                        return;
+                    }
+                    getroleobj.getComponent(cc.Sprite).spriteFrame  = data;
+                });
+
+            }else{
+                getroleobj.active = false;
+            }
+        }
+
+        setshowRole("left");
+        setshowRole("right");
+        self.isshowDialogBox.active =  data[plantpassindex]["isshowDialogBox"];
+        self.isshowDialogBox_txt.string =  data[plantpassindex]["isshowDialogBox_txt"];
+    },
+
     /**
      * 下一步
      */
@@ -39,31 +82,33 @@ cc.Class({
         cc.log(data["next"]);
         if(cc.vv.GN.Obj.instanceOf(data["next"],"String")){
             this.node.getComponent(cc.Button).interactable = false;
-            this._onNextCallBack(data["next"]);
+            this._onNextCallBack(data);
+            
         }else{
-            cc.vv.PublicUI.create_DialogBox(data["next"]);
+            self.setInfo(data["next"]);
             cc.vv.Userinfo["plantpassindex"] = data["next"];
         }
     },
 
     onSelectOneAnswer(e,t){
+        var self = this;
         if(this.getOnedata["answer"]===t){
             cc.vv.Userinfo["plantpassindex"] = 9;
         }else{
             cc.vv.Userinfo["plantpassindex"] = 8;
-            cc.vv.CG.DIALOG_CONSTANT['One']['Maxindex'] = 4;
+            cc.vv.CG.DIALOG_CONSTANT['callback_1_2']['Maxindex'] = 4;
         }
 
 
-        var index = cc.vv.CG.DIALOG_CONSTANT['One']['index']
-        var maxindex = cc.vv.CG.DIALOG_CONSTANT['One']['Maxindex']
+        var index = cc.vv.CG.DIALOG_CONSTANT['callback_1_2']['index']
+        var maxindex = cc.vv.CG.DIALOG_CONSTANT['callback_1_2']['Maxindex']
         if(index>=maxindex){
             cc.vv.Userinfo["plantpassindex"] = 10;
         }
         //下一步
         this._clearAllScreen();
         var data =this._getplantData(cc.vv.Userinfo["plantindex"])[cc.vv.Userinfo["plantpassindex"]];
-        cc.vv.PublicUI.create_DialogBox(data["id"]);
+        self.setInfo(data["id"]);
         this.node.getComponent(cc.Button).interactable = true;
     },
 
@@ -72,7 +117,22 @@ cc.Class({
      */
     _onNextCallBack(type){
         var self = this;
-        function One() {
+
+        function _Save(){
+            if(type["save"]){
+                cc.vv.Userinfo.updateUserDialog(cc.vv.Userinfo["plantindex"],type["save"]);
+            }
+        }
+        
+        function _loadScene(scenename){
+            cc.vv.PublicUI._get_DialogBox_Instance = false;
+            cc.director.loadScene(scenename);
+        }
+
+        /**
+         * _Callback_新球id_新球中关卡id
+         */
+        function _Callback_1_1() {
 
             var issuedata = cc.vv.CG.ISSUE_LIBRARYS_JSON;
             //清空下方对话框文本
@@ -85,7 +145,7 @@ cc.Class({
             //随机一个题目
 
             var randomOne;
-            if( cc.vv.CG.DIALOG_CONSTANT['One']['index']>0){
+            if( cc.vv.CG.DIALOG_CONSTANT['callback_1_2']['index']>0){
                 randomOne = cc.vv.GN.Num.randomNumber(4,17);
             }else{
                 randomOne = cc.vv.GN.Num.randomNumber(1,3);
@@ -107,23 +167,36 @@ cc.Class({
                 getone_txtLable.string = getselects[i];
             }
 
-            cc.vv.CG.DIALOG_CONSTANT['One']['index']  +=1; //进入次数
+            cc.vv.CG.DIALOG_CONSTANT['callback_1_2']['index']  +=1; //进入次数
         }
-        function Exit() {
+
+
+        function _Callback_1_2() {
+            _loadScene("Game_1_2");
+        }
+
+        function _Exit() {
             self.node.destroyAllChildren();
             self.node.destroy();
             cc.vv.PublicUI._get_DialogBox_Instance = false;
-            cc.vv.Userinfo.updateUserDialog(cc.vv.Userinfo["plantpassindex"]);
+            _Save();
+            if(cc.director.getScene().name!="Explore"){
+                cc.director.loadScene("Explore");
+            }
         }
-        switch (type) {
-            case "callback_1_6":
-                One();
+
+        switch (type["next"]) {
+            case "callback_1_7":
+                _Callback_1_1();
                 break;
+            case "callback_1_15":
+                _Callback_1_2();
+                break;      
             case "Exit": //退出
-                Exit();
-                break;
+                _Exit();
+                break;    
             default:
-                throw new Error("type not Find");
+                throw new Error(type["next"]+" type not Find");
                 break;
         }
     },
@@ -138,6 +211,5 @@ cc.Class({
     _getplantData(userplant){
         return cc.vv.CG["PLANT_"+userplant+"_JSON"];
     }
-
     // update (dt) {},
 });

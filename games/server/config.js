@@ -1,5 +1,6 @@
 var CLIENT_PORT = "8240";
-var CLIENT_IP = "192.168.1.108";
+//var CLIENT_IP = "192.168.1.108";
+var CLIENT_IP = "localhost";
 var ACCOUNT_KEY = "@#*&^*&@$asdAA";
 
 exports.userServer = function(){
@@ -12,7 +13,8 @@ exports.userServer = function(){
     
 exports.mysql = function(){
     return {
-        HOST : "192.168.1.108",
+       // HOST : "192.168.1.108",
+        HOST : "localhost",
         USER : "root",
         PASSWORD : "123456",
         DBNAME : "educationgame",

@@ -64,7 +64,9 @@ cc.Class({
                     cc.vv.Userinfo["plantindex"] = data["userInfo"]["plantindex"];
                     self.loadScene();
                 }else{
-                    cc.vv.PublicUI.create_SelectBox(data.msg);
+                    cc.vv.PublicUI.create_SelectBox({
+                        "txt":data.msg
+                    });
                 }
             }
 
@@ -84,9 +86,13 @@ cc.Class({
         cc.vv.HTTP.sendRequest('/register',data,function(data){
             if(data){
                 if(data["code"]=='0'){
-                    cc.vv.PublicUI.create_SelectBox("注冊成功！！");
+                    cc.vv.PublicUI.create_SelectBox({
+                        "txt":"注册成功！！"
+                    });
                 }else{
-                    cc.vv.PublicUI.create_SelectBox(data.msg);
+                    cc.vv.PublicUI.create_SelectBox({
+                        "txt":data.msg
+                    });
                 }
             }
         })

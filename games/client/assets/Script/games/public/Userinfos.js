@@ -25,7 +25,6 @@ cc.Class({
     },
 
      onLoad () {
-         cc.log("UserINfP");
         this.initUserinfo();
      },
     

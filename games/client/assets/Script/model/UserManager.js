@@ -20,18 +20,26 @@ cc.Class({
     /**
      * 更新用户关卡索引ID
      */
-    updateUserDialog(dialogindex){
+    updateUserDialog(plantindex,plantpassindex){
+        var self = this;
         var data = {
-            "account"     :  cc.vv.Userinfo["account"],
-            "dialogindex" :  dialogindex,
-            "sign"        :  cc.vv.Userinfo["sign"]
+            "account"         :  cc.vv.Userinfo["account"],
+            "plantindex"      :  parseInt(plantindex),
+            "plantpassindex"  :  plantpassindex,
+            "sign"            :  cc.vv.Userinfo["sign"]
         }
-        cc.vv.HTTP.sendRequest('/dialogindex',data,function(data){
+        cc.vv.HTTP.sendRequest('/updatePlantindex',data,function(data){
             if(data){
                 if(data["code"]=='0'){
-                    cc.vv.PublicUI.create_SelectBox(data["userinfo"]["dialogindex"]);
+                    self.plantindex = plantindex;
+                    self.plantpassindex = plantpassindex;
+                    cc.vv.PublicUI.create_SelectBox({
+                        "txt":data.msg
+                    });
                 }else{
-                    cc.vv.PublicUI.create_SelectBox(data.msg);
+                    cc.vv.PublicUI.create_SelectBox({
+                        "txt":data.msg
+                    });
                 }
             }
         })

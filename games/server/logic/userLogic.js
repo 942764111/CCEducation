@@ -38,16 +38,16 @@ exports.updateInfo = function(sex,username,account, callback){
 
 
 //更新用户关卡索引ID
-exports.updateDialogindex = function(dialogindex,account, callback){
+exports.updatePlantindex = function(plantindex,plantpassindex,account, callback){
     callback = callback == null ? nop : callback;
-    if(account == null || dialogindex == null){
+    if(account == null || plantindex == null || plantpassindex==null){
         callback(null);
         return;
     }
 
-    userDao.updateDialogindex(dialogindex,account,function(suc){
+    userDao.updatePlantindex(plantindex,plantpassindex,account,function(suc){
             if(suc){
-                callback(true);
+                callback(true); 
             }else{
                 callback(false); 
             }
