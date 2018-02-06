@@ -21,7 +21,6 @@ var GN = GN||{
  数组常用接口
  */
 (function () {
-    console.log("21312312");
     //数组去重
     //ES6新增的Set数据结构，类似于数组，但是里面的元素都是唯一的 ，其构造函数可以接受一个数组作为参数
     //let arr=[1,2,1,2,6,3,5,69,66,7,2,1,4,3,6,8,9663,8]
@@ -403,7 +402,7 @@ var GN = GN||{
     //字符串替换
     //字符串替换(字符串,要替换的字符,替换成什么)
     GN.Str.replaceAll = function(str,AFindText,ARepText){
-        raRegExp = new RegExp(AFindText,"g");
+        var raRegExp = new RegExp(AFindText,"g");
         return str.replace(raRegExp,ARepText);
     }
 
@@ -595,8 +594,9 @@ var GN = GN||{
         return _json;
     };
 
-    GN.Obj.getFileJSON = function(jsonfileName,CallBack){
-        var url = cc.url.raw("resources/json/"+jsonfileName);
+    GN.Obj.getFileJSON = function(jsonfileName,CallBack,extraUrl){
+        var path = extraUrl?extraUrl:"resources/json/"+jsonfileName;
+        var url = cc.url.raw(path);
         var str = cc.loader.load({url: url, type: "json"},function(err, data){
             if (err) {
                 cc.error(err.message || err);

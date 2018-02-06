@@ -12,21 +12,8 @@ cc.Class({
     onLoad () {
 
         var self = this;
-        cc.loader.loadRes('textures/images/Role/'+cc.vv.CG.ROLE_JSON[cc.vv.Userinfo["role"]]['img'], cc.SpriteFrame, function (err, data) {
-            if (err) {
-                cc.error(err.message || err);
-                return;
-            }
-            self.show_Role.getComponent(cc.Sprite).spriteFrame = data;
-        });
-
+        cc.vv.PublicUI.create_Role(cc.vv.Userinfo.role,self.show_Role);
         cc.vv.PublicUI.create_UserinfoBox();
-    },
-    start(){
-        cc.log(this.node.getComponent("GameMain"));
-    },
-    _test : function(){
-        cc.log("_test")
     },
     onLoadScene(e,eventid){
 
@@ -54,6 +41,5 @@ cc.Class({
                 throw new Error(eventid + "not Find By  ",this.name) 
                 break;
         }
-    },
-
+    }
 });

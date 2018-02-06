@@ -104,7 +104,7 @@
     "rightid": -1,
     "isshowDialogBox": 1,
     "isshowDialogBox_txt": "很好！你通过了测试！检修好飞行器，准备执行探索任务！",
-    "next": "Exit",
+    "next": 11,
     "save": 11,
     "reward": 0,
     "background": null
@@ -192,7 +192,7 @@
     "rightid": -1,
     "isshowDialogBox": 1,
     "isshowDialogBox_txt": "看样子飞船的各个功能都没有问题，准备进入尼克尔星！",
-    "next": "Exit",
+    "next": 20,
     "save": 20,
     "reward": 0,
     "background": null
@@ -280,7 +280,7 @@
     "rightid": -1,
     "isshowDialogBox": 1,
     "isshowDialogBox_txt": "没问题！带的采集工具数量都对了！",
-    "next": "Exit",
+    "next": 28,
     "save": 28,
     "reward": 0,
     "background": null
@@ -368,7 +368,7 @@
     "rightid": -1,
     "isshowDialogBox": 1,
     "isshowDialogBox_txt": "好！符号被我解开了，大门正在开启！",
-    "next": "Exit",
+    "next": 36,
     "save": 36,
     "reward": 0,
     "background": null
@@ -456,6 +456,61 @@
     "rightid": -1,
     "isshowDialogBox": 1,
     "isshowDialogBox_txt": "好！用这挖土机来找一条路吧！",
+    "next": 44,
+    "save": 44,
+    "reward": 0,
+    "background": null
+  },
+  "44": {
+    "id": 44,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "看样子地底有一些矿脉，挖土机不可以穿过这些较硬的石头。",
+    "next": 45,
+    "save": null,
+    "reward": 0,
+    "background": "007"
+  },
+  "45": {
+    "id": 45,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "只能找出一条土壤比较松软的道路了。",
+    "next": 46,
+    "save": null,
+    "reward": 0,
+    "background": null
+  },
+  "46": {
+    "id": 46,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "好，向地面出发！",
+    "next": "callback_1_46",
+    "save": null,
+    "reward": 0,
+    "background": null
+  },
+  "47": {
+    "id": 47,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "能源耗尽了……",
+    "next": "callback_1_46",
+    "save": null,
+    "reward": 0,
+    "background": null
+  },
+  "48": {
+    "id": 48,
+    "leftid": "self",
+    "rightid": -1,
+    "isshowDialogBox": 1,
+    "isshowDialogBox_txt": "到了！这次探险很成功！",
     "next": "Exit",
     "save": null,
     "reward": 0,

@@ -21,7 +21,7 @@ cc.Class({
 
     onselectBoxClick(e){
         var target = e.target
-                     self = this;
+                     ,self = this;
 
         function btn_1() {
             cc.vv.PublicUI.create_DialogBox(cc.vv.Userinfo["plantpassindex"]);

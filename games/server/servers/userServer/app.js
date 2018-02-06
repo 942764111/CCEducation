@@ -1,4 +1,4 @@
-var cfg = require(process.argv[2]);
+var cfg = require("../../config");
 var config = cfg.userServer();
 
 var db = require("../../utils/db");

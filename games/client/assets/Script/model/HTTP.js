@@ -1,5 +1,5 @@
-var URL = "http://localhost:8240";
-//var URL = "http://192.168.1.108:8240";
+var URL = "http://47.104.3.58:8240";
+//var URL = "http://localhost:8240";
 var HTTP = HTTP||{
         sessionId : 0,
         userId : 0,

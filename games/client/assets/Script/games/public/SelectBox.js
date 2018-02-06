@@ -36,7 +36,7 @@ cc.Class({
     onClickEvents(e){
 
         var target = e.target
-                     self = this;
+                     ,self = this;
 
         function onbtn_1(){
             self.node.destroyAllChildren();

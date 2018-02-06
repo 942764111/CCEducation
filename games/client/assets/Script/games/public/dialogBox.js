@@ -34,39 +34,41 @@ cc.Class({
         var self = this;
         var data =self._getplantData(cc.vv.Userinfo["plantindex"]);
 
+        
+        function setbg(){
+            if(data[plantpassindex]["background"]){
+                cc.log(data[plantpassindex]["background"]);
+                cc.loader.loadRes('prefab/bg/'+data[plantpassindex]["background"], function (err, prefab) {
+                    if (err) {
+                        cc.error(err.message || err);
+                        return;
+                    }
+                    var prefab = cc.instantiate(prefab);
+                    self.node.getChildByName("bg").addChild(prefab);
+                });
+
+            }
+        }
+
         function setshowRole(roletype){
            var getroleobj = roletype=="left"?self.left_role:self.rightid_role
                      ,roleid = roletype=="left"?"leftid":"rightid";
             var roleres;
-            if(data[plantpassindex][roleid]=="self"){ //自己
-
+            if(data[plantpassindex][roleid]=="self"){ //自己  
                 getroleobj.active = true;
-                roleres = cc.vv.CG.ROLE_JSON[cc.vv.Userinfo["role"]]["img"];
-                cc.loader.loadRes('textures/images/Role/'+roleres, cc.SpriteFrame, function (err, data) {
-                    if (err) {
-                        cc.error(err.message || err);
-                        return;
-                    }
-                    getroleobj.getComponent(cc.Sprite).spriteFrame  = data;
-                });
+
+                cc.vv.PublicUI.create_Role(cc.vv.Userinfo["role"],getroleobj);
 
             }else if(data[plantpassindex][roleid]>0){ //role ID
-
+    
                 getroleobj.active = true;
-                roleres = cc.vv.CG.ROLE_JSON[data[plantpassindex][roleid]]["img"];
-                cc.loader.loadRes('textures/images/Role/'+roleres, cc.SpriteFrame, function (err, data) {
-                    if (err) {
-                        cc.error(err.message || err);
-                        return;
-                    }
-                    getroleobj.getComponent(cc.Sprite).spriteFrame  = data;
-                });
+                cc.vv.PublicUI.create_Role(data[plantpassindex][roleid],getroleobj);
 
             }else{
                 getroleobj.active = false;
             }
         }
-
+        setbg();
         setshowRole("left");
         setshowRole("right");
         self.isshowDialogBox.active =  data[plantpassindex]["isshowDialogBox"];
@@ -79,7 +81,6 @@ cc.Class({
     onNextStep() {
         var self = this;
         var data =self._getplantData(cc.vv.Userinfo["plantindex"])[cc.vv.Userinfo["plantpassindex"]];
-        cc.log(data["next"]);
         if(cc.vv.GN.Obj.instanceOf(data["next"],"String")){
             this.node.getComponent(cc.Button).interactable = false;
             this._onNextCallBack(data);
@@ -175,11 +176,26 @@ cc.Class({
             _loadScene("Game_1_2");
         }
 
+        function _Callback_1_3() {
+            _loadScene("Game_1_3");
+        }
+
+        function _Callback_1_4() {
+            _loadScene("Game_1_4");
+        }
+
+        function _Callback_1_5() {
+            _loadScene("Game_1_5");
+        }
+
+        function _Callback_1_6() {
+            _loadScene("Game_1_6");
+        }
+
         function _Exit() {
             self.node.destroyAllChildren();
             self.node.destroy();
             cc.vv.PublicUI._get_DialogBox_Instance = false;
-            _Save();
             if(cc.director.getScene().name!="Explore"){
                 cc.director.loadScene("Explore");
             }
@@ -191,14 +207,29 @@ cc.Class({
                 break;
             case "callback_1_15":
                 _Callback_1_2();
-                break;      
+                break;     
+            case "callback_1_24":
+                _Callback_1_3();
+                break;     
+            case "callback_1_33":
+                _Callback_1_4();
+                break;   
+            case "callback_1_40":
+                _Callback_1_5();
+                break;
+            case "callback_1_46":
+                _Callback_1_6();
+                break;           
             case "Exit": //退出
                 _Exit();
                 break;    
             default:
+                _Exit();
                 throw new Error(type["next"]+" type not Find");
                 break;
         }
+
+            _Save();
     },
 
     _clearAllScreen(){

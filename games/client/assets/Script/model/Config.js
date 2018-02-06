@@ -1,18 +1,37 @@
 var CG = CG || {};
 var GN = require("public");
-CG.SELECT_BOX = {
-    INFO:"",
+
+//background 游戏中得背景
+CG.BGIMG = {
+    "001":{"id":"001","path":""},
+    "002":{"id":"001","path":""},
+    "003":{"id":"001","path":""},
+    "004":{"id":"001","path":""},
+    "005":{"id":"001","path":""},
+    "007":{"id":"001","path":""},
+    "008":{"id":"001","path":""}
 }
 
-CG.DIALOG_INDEX = 1,
 
 
+/**
+ * 每一关对话逻辑处理配置表
+ * 
+ * index :每一关当前进入的次数
+ * Maxindex :每一关限制最大进入的次数
+ * winNextID : 成功以后玩家的下一步执行ID 参见 plant json
+ * failureNextID : 失败以后玩家的下一步执行ID 参见 plant json
+ */
 CG.DIALOG_CONSTANT = {
     "callback_1_1":{"index":0,"Maxindex":3,"random_scope":[
         "1,3",
         "4,17"
     ]},
-    "callback_1_2":{"index":0,"Maxindex":3},
+    "callback_1_2":{"index":0,"Maxindex":3,"winNextID":19,"failureNextID":17},
+    "callback_1_3":{"index":0,"Maxindex":3,"winNextID":27,"failureNextID":26},
+    "callback_1_4":{"index":0,"Maxindex":3,"winNextID":35,"failureNextID":34},
+    "callback_1_5":{"index":0,"Maxindex":3,"winNextID":43,"failureNextID":42},
+    "callback_1_6":{"index":0,"Maxindex":3,"winNextID":48,"failureNextID":47},
     "GAME_RUN_STATE":{
         INIT : 1, // 初始化
         RUN  : 2, // 游戏中
@@ -82,6 +101,25 @@ CG.INIT_JSON = function(){
 
     //====================game_1_3 end
 
+
+
+    //====================game_1_4 begin
+    /**
+     *  1星球    4关卡    控制表
+     */
+    GN.Obj.getFileJSON("games/game_1_4.json",function(data){
+        CG.GAME_1_4_JSON = data;
+    });
+
+
+    /**
+     *   1星球    4关卡    符文表
+     */
+    GN.Obj.getFileJSON("games/game_1_4_rune.json",function(data){
+        CG.GAME_1_4_RUNE_JSON = data;
+    });
+
+    //====================game_1_4 end
 
 
 

@@ -6,7 +6,7 @@
   "includeAnySDK": false,
   "includeSDKBox": false,
   "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
+  "inlineSpriteFrames_native": false,
   "jailbreakPlatform": false,
   "md5Cache": false,
   "mergeStartScene": false,
@@ -18,11 +18,11 @@
     "portrait": false,
     "upsideDown": false
   },
-  "packageName": "org.cocos2d.helloworld",
+  "packageName": "org.cocos2d.client",
   "privateKey": "",
   "renderMode": "0",
-  "startScene": "d27b42a6-fda2-4e31-846d-3de8d9bb7a77",
-  "title": "test",
+  "startScene": "574facd5-1a98-44e1-a335-a9265f931d5e",
+  "title": "client",
   "webOrientation": "landscape",
-  "xxteaKey": "54ca5408-68f7-47"
+  "xxteaKey": "4caec630-768f-4f"
 }

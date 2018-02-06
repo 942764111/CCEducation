@@ -15,9 +15,6 @@
     "_children": [
       {
         "__id__": 2
-      },
-      {
-        "__id__": 49
       }
     ],
     "_tag": -1,
@@ -48,7 +45,7 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0,
-    "autoReleaseAssets": null
+    "autoReleaseAssets": {}
   },
   {
     "__type__": "cc.Node",
@@ -66,7 +63,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 48
+        "__id__": 47
       }
     ],
     "_prefab": null,
@@ -128,7 +125,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 47
+        "__id__": 46
       }
     ],
     "_prefab": null,
@@ -369,10 +366,10 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 4
+      "__id__": 5
     },
     "asset": {
-      "__uuid__": "3d650be4-870a-4f79-ba63-9ba13013cb54"
+      "__uuid__": "f6e3284f-6233-4142-b498-e68704b74916"
     },
     "fileId": "88+1OiuspKtKqJ7YFWcaUn",
     "sync": false
@@ -460,10 +457,10 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 4
+      "__id__": 5
     },
     "asset": {
-      "__uuid__": "3d650be4-870a-4f79-ba63-9ba13013cb54"
+      "__uuid__": "f6e3284f-6233-4142-b498-e68704b74916"
     },
     "fileId": "74Lv0pEy9EMo7i+L57cyL/",
     "sync": false
@@ -483,10 +480,10 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 4
+      "__id__": 5
     },
     "asset": {
-      "__uuid__": "3d650be4-870a-4f79-ba63-9ba13013cb54"
+      "__uuid__": "f6e3284f-6233-4142-b498-e68704b74916"
     },
     "fileId": "89LNqZI6lOAbKKA8b+PNio",
     "sync": false
@@ -1598,11 +1595,7 @@
     "_children": [],
     "_tag": -1,
     "_active": true,
-    "_components": [
-      {
-        "__id__": 46
-      }
-    ],
+    "_components": [],
     "_prefab": null,
     "_id": "6efdA3pd5L87dv/vP32Xi2",
     "_opacity": 255,
@@ -1621,8 +1614,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 459,
-      "height": 769
+      "width": 0,
+      "height": 0
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1639,30 +1632,6 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 45
-    },
-    "_enabled": true,
-    "_spriteFrame": null,
-    "_type": 0,
-    "_sizeMode": 1,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_atlas": null
   },
   {
     "__type__": "ceae7nR8SRLm445U4rbLSgV",
@@ -1691,83 +1660,5 @@
     },
     "_fitWidth": false,
     "_fitHeight": true
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "太空船内景效果图",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_tag": -1,
-    "_active": false,
-    "_components": [
-      {
-        "__id__": 50
-      }
-    ],
-    "_prefab": null,
-    "_id": "101fOg51RDK7Qcd99/w7Wg",
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 1920,
-      "height": 1080
-    },
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": 927,
-      "y": 101
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_opacityModifyRGB": false,
-    "groupIndex": 0
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 49
-    },
-    "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "f2c56980-470f-48ff-bf4c-2c450b2f89aa"
-    },
-    "_type": 0,
-    "_sizeMode": 1,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_atlas": null
   }
 ]

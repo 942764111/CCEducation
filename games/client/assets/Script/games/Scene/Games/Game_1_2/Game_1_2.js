@@ -307,11 +307,11 @@ cc.Class({
         var tools = this._F_game_Tools();
         function _createDialogBox(iswin) {
             if(iswin){
-                cc.vv.Userinfo["plantpassindex"] = 19;
+                cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_2"]["winNextID"];;
             }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_2"].index===cc.vv.CG.DIALOG_CONSTANT["callback_1_2"].Maxindex){
-                cc.vv.Userinfo["plantpassindex"] = 19;
+                cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_2"]["winNextID"];;
             }else{
-                cc.vv.Userinfo["plantpassindex"] = 17;
+                cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_2"]["failureNextID"];
             }
     
             cc.vv.PublicUI.create_DialogBox(cc.vv.Userinfo["plantpassindex"]);

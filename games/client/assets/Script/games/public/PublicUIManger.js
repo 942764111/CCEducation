@@ -1,5 +1,3 @@
-
-var dialogBox = require("dialogBox");
 /**
  * public UI 工厂
  */
@@ -92,7 +90,81 @@ var dialogBox = require("dialogBox");
                 cc.director.getScene().getChildByName('Canvas').getChildByName("Node").addChild(prefab);
             });
     }
+
     /**
+     * //临时函数
+     * 创建角色    对图片和骨骼做了外观模式封装
+     * 
+     */
+    ,create_Role(roleID,roleNode){
+        if(roleNode.RecordroleID&&roleID==roleNode.RecordroleID&&roleNode.RecordroleNode&&roleNode.RecordroleNode==roleNode)return;
+      
+        var self = this,sprite;  
+        if(cc.vv.CG.ROLE_JSON[roleID]['db']){
+
+            if(roleNode.getComponent(dragonBones.ArmatureDisplay)){
+                sprite =  roleNode.getComponent(dragonBones.ArmatureDisplay);  
+            }else{
+                if(roleNode.getComponent(cc.Sprite)){
+                    roleNode.removeComponent(cc.Sprite);
+                }
+                sprite =  roleNode.addComponent(dragonBones.ArmatureDisplay);  
+            }
+
+            cc.loader.loadResDir('adminClips/roleAdminClips/'+cc.vv.CG.ROLE_JSON[roleID]['db'], function(err, assets){  
+                if(err){  
+                    return;  
+                }  
+                  
+                if(assets.length <= 0){  
+                    return;  
+                }   
+                try {
+                    for(var i in assets){  
+                        if(assets[i] instanceof dragonBones.DragonBonesAsset){  
+                            sprite.dragonAsset = assets[i];  
+                        }  
+                        if(assets[i] instanceof dragonBones.DragonBonesAtlasAsset){  
+                            sprite.dragonAtlasAsset  = assets[i];  
+                        }  
+                    }  
+                    
+                    sprite.armatureName = cc.vv.CG.ROLE_JSON[roleID]['name'];  
+                    sprite.playAnimation('idle'); 
+                    //记录精灵纹理ID和node节点避免多次调用此函数 
+                    roleNode.RecordroleID  = roleID;
+                    roleNode.RecordroleNode  = roleNode;
+                } catch (error) {
+                    
+                }
+
+            }) 
+        }else if(cc.vv.CG.ROLE_JSON[roleID]['img']){
+            if(roleNode.getComponent(cc.Sprite)){
+                sprite =  roleNode.getComponent(cc.Sprite);  
+            }else{
+                if(roleNode.getComponent(dragonBones.ArmatureDisplay)){
+                    roleNode.removeComponent(dragonBones.ArmatureDisplay);
+                }
+                sprite =  roleNode.addComponent(cc.Sprite);  
+            }
+
+            cc.loader.loadRes('textures/images/Role/'+cc.vv.CG.ROLE_JSON[roleID]['img'], cc.SpriteFrame, function (err, data) {
+                if (err) {
+                    cc.error(err.message || err);
+                    return;
+                }
+                try {
+                    sprite.getComponent(cc.Sprite).spriteFrame = data;
+                } catch (error) {
+                    
+                }
+            }); 
+
+        }
+    }
+    /**
+     * 临时函数
      * 暂时得按钮公用接口
      */
     ,buttonCallBack(){

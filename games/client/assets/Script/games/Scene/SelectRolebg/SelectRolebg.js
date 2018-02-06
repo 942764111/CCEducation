@@ -18,18 +18,14 @@ cc.Class({
     },
 
     onLoad () {
-
-        var self = this;
-        
         this.initRoleList();
-      //  this.setConfirmRoleinfo(this.initShowRoleID);
     },
      
     initRoleList(){
         var  CG = cc.vv.CG
-                    ,roleobj;
-                    self = this,
-                    roleobj = this.Roles_list;
+                    ,roleobj
+                    ,self = this
+                    ,roleobj = this.Roles_list;
         
         var index = 0;
         function loadRes(i) {
