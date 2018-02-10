@@ -511,7 +511,7 @@
     "rightid": -1,
     "isshowDialogBox": 1,
     "isshowDialogBox_txt": "到了！这次探险很成功！",
-    "next": "Exit",
+    "next": "showEvaluating",
     "save": 48,
     "reward": 0,
     "background": null

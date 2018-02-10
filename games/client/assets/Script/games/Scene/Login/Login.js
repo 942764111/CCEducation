@@ -2,6 +2,7 @@ var HTTP  = require("HTTP");
 var CG = require("Config");
 var GN = require("public");
 var UserManager = require("UserManager"); 
+var UserScoreManager = require("UserScoreManager"); 
 var PublicUIManger = require("PublicUIManger"); 
 cc.Class({
     extends: cc.Component,
@@ -31,6 +32,7 @@ cc.Class({
         cc.vv.HTTP = HTTP;
         cc.vv.GN = GN;
         cc.vv.Userinfo = new UserManager();
+        cc.vv.UserScoreinfo = new UserScoreManager();
         cc.vv.PublicUI = new PublicUIManger();
         /**
          * 加载客户端json
@@ -49,7 +51,7 @@ cc.Class({
             "account":account_str,
             "password":password_str
         }
-        cc.vv.HTTP.sendRequest('/loginGame',data,function(data){
+        cc.vv.HTTP.sendRequest(cc.vv.CG.HTTP_POST_CONFIG["USER_INFO"],'/loginGame',data,function(data){
             if(data){
                 if(data["code"]=='0'){
                     cc.vv.Userinfo["uname"] =  data["userInfo"]["uname"];
@@ -83,7 +85,7 @@ cc.Class({
             "account":account_str,
             "password":password_str
         }
-        cc.vv.HTTP.sendRequest('/register',data,function(data){
+        cc.vv.HTTP.sendRequest(cc.vv.CG.HTTP_POST_CONFIG["USER_INFO"],'/register',data,function(data){
             if(data){
                 if(data["code"]=='0'){
                     cc.vv.PublicUI.create_SelectBox({
@@ -102,11 +104,6 @@ cc.Class({
      * @param {*场景名字} scenename 
      */
     loadScene(){
-        if(cc.vv.Userinfo["uname"]){
-            cc.director.loadScene("Loading");
-        }else{
-            cc.director.loadScene("SelectRolebg");
-        }
-        
+        cc.director.loadScene("Loading");
     }
 });

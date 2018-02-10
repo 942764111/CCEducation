@@ -32,7 +32,7 @@ cc.Class({
             if(index>CG['INIT_SELECT_ROLEID'].length-1)return;
 
             var getRoleSpriteFrame = CG.ROLE_JSON[CG['INIT_SELECT_ROLEID'][index]]['img'];
-             cc.loader.loadRes('textures/images/Role/'+getRoleSpriteFrame, cc.SpriteFrame, function (err, data) {
+             cc.loader.loadRes('res/textures/images/Role/'+getRoleSpriteFrame, cc.SpriteFrame, function (err, data) {
                 if (err) {
                     cc.error(err.message || err);
                     return;
@@ -68,27 +68,9 @@ cc.Class({
     },
     
     onSelectRoles(){
-        var data = {
-            "account":cc.vv.Userinfo["account"],
-            "uname":cc.vv.Userinfo["account"],
-            "role" : this.initShowRoleID,
-            "sign" : cc.vv.Userinfo["sign"]
-        }
-        cc.vv.HTTP.sendRequest('/createRole',data,function(data){
-            if(data){
-                if(data["code"]=='0'){
-                    cc.vv.Userinfo["uname"] =  data["uname"];
-                    cc.vv.Userinfo["role"] =  data["role"];
-                    cc.director.loadScene("Loading");
-                }else{
-                    cc.vv.PublicUI.create_SelectBox({
-                        "txt":data.msg
-                    });
-                }
-            }
-
-        })
-
+        cc.vv.Userinfo.createRole(this.initShowRoleID,function(){
+            cc.director.loadScene("GameMain");
+        });
     },
     start () {
 

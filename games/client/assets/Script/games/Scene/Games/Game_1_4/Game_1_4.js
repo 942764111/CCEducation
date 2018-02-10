@@ -105,10 +105,10 @@ cc.Class({
                     }
                     switch(type){
                         case "RUNE":
-                            URL = 'textures/images/game_1_4/runes/'+getData[getAllid[index]]["img"];
+                            URL = 'res/textures/images/game_1_4/runes/'+getData[getAllid[index]]["img"];
                          break;
                          case "PW":
-                            URL = 'textures/images/game_1_4/password/pw_'+getData[getAllid[index]]["password"]+"";
+                            URL = 'res/textures/images/game_1_4/password/pw_'+getData[getAllid[index]]["password"]+"";
                          break;
                     }
                     cc.loader.loadRes(URL, cc.SpriteFrame, function (err, data) {
@@ -214,10 +214,22 @@ cc.Class({
         function _createDialogBox(iswin) {
             if(iswin){
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_4"]["winNextID"];
-            }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_4"].index===cc.vv.CG.DIALOG_CONSTANT["callback_1_4"].Maxindex){
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(4);
+
+            }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_4"].index==cc.vv.CG.DIALOG_CONSTANT["callback_1_4"].Maxindex){
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_4"]["winNextID"];
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(4);
+
             }else{
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_4"]["failureNextID"];
+
+               if(cc.vv.UserScoreinfo["game_1_4"]>=5){
+                    cc.vv.UserScoreinfo["game_1_4"]-=5;
+                }
             }
     
             cc.vv.PublicUI.create_DialogBox(cc.vv.Userinfo["plantpassindex"]);

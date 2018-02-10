@@ -16,6 +16,11 @@ cc.Class({
             "playTimes":0
         });
         cc.vv.PublicUI.create_UserinfoBox(false);
+
+
+
+        //获取用户分数
+        cc.vv.UserScoreinfo.getAllUserScore();
     },
     onLoadScene(e,eventid){
 
@@ -28,7 +33,18 @@ cc.Class({
                 loadScene("Explore");
                 break;
             case "figure"://人物
-            cc.vv.PublicUI.buttonCallBack();
+           // cc.vv.PublicUI.buttonCallBack();
+
+                cc.loader.loadRes('res/prefab/evaluating', function (err, data) {
+                    if (err) {
+                        cc.error(err.message || err);
+                        return;
+                    }
+
+                    var getsEvaluatingNode = cc.instantiate(data);
+                    cc.director.getScene().getChildByName('Canvas').addChild(getsEvaluatingNode);
+                });
+
                 break;
             case "Webstars"://星网
             cc.vv.PublicUI.buttonCallBack();

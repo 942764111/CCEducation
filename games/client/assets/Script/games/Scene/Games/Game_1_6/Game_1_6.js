@@ -27,6 +27,7 @@ cc.Class({
         cc.director.getPhysicsManager().gravity = this.gravity;
 
         this.runGame();
+
     },
     runGame(){
         var self = this;
@@ -49,10 +50,23 @@ cc.Class({
         function _createDialogBox(iswin) {
             if(iswin){
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_6"]["winNextID"];
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(6);
+
             }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_6"].index===cc.vv.CG.DIALOG_CONSTANT["callback_1_6"].Maxindex){
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_6"]["winNextID"];
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(6);
+
             }else{
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_6"]["failureNextID"];
+
+                if(cc.vv.UserScoreinfo["game_1_6"]>=5){
+                    cc.vv.UserScoreinfo["game_1_6"]-=5;
+                }
+
             }
     
             cc.vv.PublicUI.create_DialogBox(cc.vv.Userinfo["plantpassindex"]);

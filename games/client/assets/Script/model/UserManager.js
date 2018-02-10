@@ -28,7 +28,7 @@ cc.Class({
             "plantpassindex"  :  plantpassindex,
             "sign"            :  cc.vv.Userinfo["sign"]
         }
-        cc.vv.HTTP.sendRequest('/updatePlantindex',data,function(data){
+        cc.vv.HTTP.sendRequest(cc.vv.CG.HTTP_POST_CONFIG["USER_INFO"],'/updatePlantindex',data,function(data){
             if(data){
                 if(data["code"]=='0'){
                     self.plantindex = plantindex;
@@ -46,17 +46,17 @@ cc.Class({
     /**
      * 获取用户关卡索引ID
      */
-    getPlantpassindex(CallBack){
+    getPlantpassindex(callBack){
         var self = this;
         var data = {
             "account"         :  cc.vv.Userinfo["account"],
             "sign"            :  cc.vv.Userinfo["sign"]
         }
-        cc.vv.HTTP.sendRequest('/plantpassindex',data,function(data){
+        cc.vv.HTTP.sendRequest(cc.vv.CG.HTTP_POST_CONFIG["USER_INFO"],'/plantpassindex',data,function(data){
             if(data){
                 if(data["code"]=='0'){
                     cc.vv.Userinfo["plantpassindex"] = parseInt(data["sign"]["plantpassindex"]);
-                    CallBack&&CallBack({"plantpassindex":cc.vv.Userinfo["plantpassindex"]});
+                    callBack&&callBack({"plantpassindex":cc.vv.Userinfo["plantpassindex"]});
                 }else{
                     cc.vv.PublicUI.create_SelectBox({
                         "txt":data.msg
@@ -64,6 +64,32 @@ cc.Class({
                 }
             }
         })
+    },
+
+
+
+    //创建角色
+    createRole(roleid,callBack){
+        var self = this;
+        var data = {
+            "account":cc.vv.Userinfo["account"],
+            "uname":cc.vv.Userinfo["account"],
+            "role" : roleid,
+            "sign" : cc.vv.Userinfo["sign"]
+        }
+        cc.vv.HTTP.sendRequest(cc.vv.CG.HTTP_POST_CONFIG["USER_INFO"],'/createRole',data,function(data){
+            if(data){
+                if(data["code"]=='0'){
+                    cc.vv.Userinfo["uname"] =  data["uname"];
+                    cc.vv.Userinfo["role"] =  data["role"];
+                    callBack&&callBack();
+                }else{
+                    cc.vv.PublicUI.create_SelectBox({
+                        "txt":data.msg
+                    });
+                }
+            }
+        },)
     }
 
 });

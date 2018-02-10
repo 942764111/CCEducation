@@ -1,22 +1,7 @@
 //引入userDao
 var userDao = require("../dao/userDao");
 var crypto = require("../utils/crypto");
-function nop(a,b,c,d,e){}
-
-//获取建筑信息
-exports.getBuildingIF = function(callback){
-    callback = callback == null ? nop : callback;
-
-    userDao.getBuildingIF(function(rows){
-        if(rows){
-            callback(rows);
-        }else{
-            callback(false);
-        }
-    });
-
-};
-
+function nop(a,b,c,d,e){};
 
 //更新昵称和性别
 exports.updateInfo = function(sex,username,account, callback){

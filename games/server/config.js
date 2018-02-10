@@ -11,10 +11,17 @@ exports.userServer = function(){
     }
 }
     
+
+exports.scoreServer = function(){
+    return {
+        CLIENT_PORT : 8241,
+        CLIENT_IP : CLIENT_IP,
+    }
+}
+
 exports.mysql = function(){
     return {
-       // HOST : "192.168.1.108",
-        HOST : "localhost",
+        HOST : "47.104.3.58",
         USER : "root",
         PASSWORD : "123456",
         DBNAME : "educationgame",

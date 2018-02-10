@@ -66,7 +66,7 @@ cc.Class({
         function setbg(){
             if(data[plantpassindex]["background"]){
                 cc.log(data[plantpassindex]["background"]);
-                cc.loader.loadRes('prefab/bg/'+data[plantpassindex]["background"], function (err, prefab) {
+                cc.loader.loadRes('res/refab/bg/'+data[plantpassindex]["background"], function (err, prefab) {
                     if (err) {
                         cc.error(err.message || err);
                         return;
@@ -160,9 +160,15 @@ cc.Class({
     onSelectOneAnswer(e,t){
         var self = this;
         if(this.getOnedata["answer"]===t){
-            cc.vv.Userinfo["plantpassindex"] = 9;
+            cc.vv.Userinfo["plantpassindex"] = 9; //成功
+
+            cc.vv.UserScoreinfo["game_1_1"]+=5;
         }else{
-            cc.vv.Userinfo["plantpassindex"] = 8;
+            cc.vv.Userinfo["plantpassindex"] = 8; //失败
+
+            if(cc.vv.UserScoreinfo["game_1_1"]>=5){
+                cc.vv.UserScoreinfo["game_1_1"]-=5;
+            }
         }
 
 
@@ -170,6 +176,8 @@ cc.Class({
         var maxindex = cc.vv.CG.DIALOG_CONSTANT['callback_1_1']['Maxindex']
         if(index>=maxindex){
             cc.vv.Userinfo["plantpassindex"] = 10;
+            //更新分数
+            cc.vv.UserScoreinfo.updateUserScore(1);
         }
         //下一步
         this._clearAllScreen();
@@ -258,13 +266,27 @@ cc.Class({
             _loadScene("Game_1_6");
         }
 
-        function _Exit() {
+        function _Exit(callback) {
             self.node.destroyAllChildren();
             self.node.destroy();
             cc.vv.PublicUI._get_DialogBox_Instance = false;
             if(cc.director.getScene().name!="Explore"){
-                cc.director.loadScene("Explore");
+                cc.director.loadScene("Explore",callback&&callback);
             }
+        }
+
+
+        function _showEvaluating(){
+               cc.loader.loadRes('res/prefab/evaluating', function (err, data) {
+                if (err) {
+                    cc.error(err.message || err);
+                    return;
+                }
+
+                var getsEvaluatingNode = cc.instantiate(data);
+                cc.director.getScene().getChildByName('Canvas').addChild(getsEvaluatingNode);
+            });
+
         }
 
         switch (type["next"]) {
@@ -288,7 +310,12 @@ cc.Class({
                 break;           
             case "Exit": //退出
                 _Exit();
-                break;    
+                break; 
+            case "showEvaluating": //显示   评估页面
+                _Exit(function(){
+                    _showEvaluating();
+                });
+                break;
             default:
                 _Exit();
                 throw new Error(type["next"]+" type not Find");

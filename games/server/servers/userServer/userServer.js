@@ -100,7 +100,6 @@ app.get('/loginGame',function(req,res){
             //把用户信息写入redis
             userRedis.setUser(data[1]);
         }else{
-             log.warn(data);
             send(res,{code:1,msg : "the password or account is wrong"});
         }
     });

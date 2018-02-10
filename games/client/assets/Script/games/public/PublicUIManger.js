@@ -32,7 +32,7 @@
         this._get_SelectBox_Instance = true;
 
         function style_General(){
-            cc.loader.loadRes('prefab/selectBox', function (err, prefab) {
+            cc.loader.loadRes('res/prefab/selectBox', function (err, prefab) {
                 if (err) {
                     cc.error(err.message || err);
                     return;
@@ -60,7 +60,7 @@
     ,create_DialogBox(DialogBoxID){
         var  self = this;
         if(!this._get_DialogBox_Instance){
-            cc.loader.loadRes('prefab/dialogBox', function (err, prefab) {
+            cc.loader.loadRes('res/prefab/dialogBox', function (err, prefab) {
                 if (err) {
                     cc.error(err.message || err);
                     return;
@@ -84,7 +84,7 @@
             if(this._get_UserinfoBox_Instance&&isInstance)return;
 
             this._get_UserinfoBox_Instance = true;
-            cc.loader.loadRes('prefab/infos', function (err, prefab) {
+            cc.loader.loadRes('res/prefab/infos', function (err, prefab) {
                 if (err) {
                     cc.error(err.message || err);
                     return;
@@ -123,7 +123,7 @@
                 sprite =  roleNode.addComponent(dragonBones.ArmatureDisplay);  
             }
 
-           cc.loader.loadResDir('adminClips/roleAdminClips/'+cc.vv.CG.ROLE_JSON[roleID]['db'], function(err, assets){  
+           cc.loader.loadResDir('res/adminClips/roleAdminClips/'+cc.vv.CG.ROLE_JSON[roleID]['db'], function(err, assets){  
                 if(err){  
                     return;  
                 }  
@@ -166,7 +166,7 @@
                 }
                 sprite =  roleNode.addComponent(cc.Sprite);  
             }
-            cc.loader.loadRes('textures/images/Role/'+cc.vv.CG.ROLE_JSON[roleID]['img'], cc.SpriteFrame, function (err, data) {
+            cc.loader.loadRes('res/textures/images/Role/'+cc.vv.CG.ROLE_JSON[roleID]['img'], cc.SpriteFrame, function (err, data) {
                 if (err) {
                     cc.error(err.message || err);
                     return;
@@ -191,7 +191,7 @@
                             sprite =  roleNode.addComponent(cc.Animation);  
                         }
  
-                        cc.loader.loadRes('adminClips/roleAdminClips/002/002', function (err, data) {
+                        cc.loader.loadRes('res/adminClips/roleAdminClips/002/002', function (err, data) {
                             sprite.addClip(data,"idle");
                             sprite.playOnLoad = true;
                             sprite.play("idle");

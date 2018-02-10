@@ -32,7 +32,7 @@ cc.Class({
             this.status.string = cc.vv.CG.TIPS_JSON[cc.vv.GN.Num.randomNumber(0,4)]["tips"];
         },1);
         var self = this;
-        cc.loader.loadResDir("textures",function(compCount,totalCount,item){
+        cc.loader.loadResDir("res",function(compCount,totalCount,item){
             self.compDegress = compCount / totalCount;
         },function(err,assets){
             if(err){
@@ -43,7 +43,12 @@ cc.Class({
 
             //场景淡出
             self.picFadeOut(function(){
-                cc.director.loadScene("GameMain");
+                if(cc.vv.Userinfo["uname"]){
+                    cc.director.loadScene("GameMain");
+                }else{
+                    cc.director.loadScene("SelectRolebg");
+                }
+
             });
         });
 

@@ -103,7 +103,7 @@ cc.Class({
                     self._Top_itemArr.push(Topitem.children[index]);
 
                     Topitem.children[index].getChildByName("txt").getComponent(cc.Label).string = "X"+allnum[index];
-                    cc.loader.loadRes('textures/images/game_1_3/stage_1/'+CG.GAME_1_3_D1_JSON[itemid]['img'], cc.SpriteFrame, function (err, data) {
+                    cc.loader.loadRes('res/textures/images/game_1_3/stage_1/'+CG.GAME_1_3_D1_JSON[itemid]['img'], cc.SpriteFrame, function (err, data) {
                         if (err) {
                             cc.error(err.message || err);
                             return;
@@ -134,7 +134,7 @@ cc.Class({
                     item.children[index]["num"] = CG.GAME_1_3_D2_JSON[itemid]['num'];//每个对应的数量
 
                     self._right_itemArr.push(item.children[index]);
-                    cc.loader.loadRes('textures/images/game_1_3/stage_2/'+CG.GAME_1_3_D2_JSON[itemid]['img'], cc.SpriteFrame, function (err, data) {
+                    cc.loader.loadRes('res/textures/images/game_1_3/stage_2/'+CG.GAME_1_3_D2_JSON[itemid]['img'], cc.SpriteFrame, function (err, data) {
                         if (err) {
                             cc.error(err.message || err);
                             return;
@@ -395,10 +395,23 @@ cc.Class({
         function _createDialogBox(iswin) {
             if(iswin){
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_3"]["winNextID"];
-            }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_3"].index===cc.vv.CG.DIALOG_CONSTANT["callback_1_3"].Maxindex){
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(3);
+
+            }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_3"].index==cc.vv.CG.DIALOG_CONSTANT["callback_1_3"].Maxindex){
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_3"]["winNextID"];
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(3);
+
             }else{
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_3"]["failureNextID"];
+
+                if(cc.vv.UserScoreinfo["game_1_3"]>=5){
+                    cc.vv.UserScoreinfo["game_1_3"]-=5;
+                }
+
             }
     
             cc.vv.PublicUI.create_DialogBox(cc.vv.Userinfo["plantpassindex"]);

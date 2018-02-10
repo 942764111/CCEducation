@@ -315,11 +315,23 @@ cc.Class({
         var tools = this._F_game_Tools();
         function _createDialogBox(iswin) {
             if(iswin){
-                cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_2"]["winNextID"];;
-            }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_2"].index===cc.vv.CG.DIALOG_CONSTANT["callback_1_2"].Maxindex){
-                cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_2"]["winNextID"];;
+                cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_2"]["winNextID"];
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(2);
+
+            }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_2"].index==cc.vv.CG.DIALOG_CONSTANT["callback_1_2"].Maxindex){
+                cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_2"]["winNextID"];
+
+                 //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(2);
+
             }else{
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_2"]["failureNextID"];
+
+                if(cc.vv.UserScoreinfo["game_1_2"]>=5){
+                    cc.vv.UserScoreinfo["game_1_2"]-=5;
+                }
             }
     
             cc.vv.PublicUI.create_DialogBox(cc.vv.Userinfo["plantpassindex"]);

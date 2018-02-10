@@ -21,6 +21,26 @@ cc.Class({
     onLoad () {
         cc.vv.CG.DIALOG_CONSTANT["callback_1_5"].index+=1;
         this. _F_gameStateControl();
+
+
+        // 20秒后更新分数 临时
+
+        function gametime(){
+            this.unschedule(gametime);
+            //开始减分
+            function deductionScore(){
+                if(cc.vv.UserScoreinfo["game_1_5"]>0){
+                    cc.vv.UserScoreinfo["game_1_5"]-=1;
+
+                }else{
+                    cc.vv.UserScoreinfo["game_1_5"]=0;
+                    this.unscheduleAllCallbacks();
+                }
+            }
+            this.schedule(deductionScore.bind(this),1)
+        }
+        this.scheduleOnce(gametime.bind(this),20)
+
     },
     _F_gameStateControl(State){
         var self = this;
@@ -219,8 +239,16 @@ cc.Class({
         function _createDialogBox(iswin) {
             if(iswin){
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_5"]["winNextID"];
-            }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_5"].index===cc.vv.CG.DIALOG_CONSTANT["callback_1_5"].Maxindex){
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(5);
+
+            }else if(cc.vv.CG.DIALOG_CONSTANT["callback_1_5"].index==cc.vv.CG.DIALOG_CONSTANT["callback_1_5"].Maxindex){
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_5"]["winNextID"];
+
+                //更新分数
+                cc.vv.UserScoreinfo.updateUserScore(5);
+
             }else{
                 cc.vv.Userinfo["plantpassindex"] = cc.vv.CG.DIALOG_CONSTANT["callback_1_5"]["failureNextID"];
             }

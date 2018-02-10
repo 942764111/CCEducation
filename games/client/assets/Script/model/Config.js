@@ -1,6 +1,12 @@
 var CG = CG || {};
 var GN = require("public");
 
+
+CG.HTTP_POST_CONFIG = {
+     "USER_INFO":8240,
+     "USER_SCORE":8241
+ }
+
 /**
  * 每一关对话逻辑处理配置表
  * 
