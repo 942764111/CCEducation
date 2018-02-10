@@ -40,7 +40,7 @@ cc.Class({
                 roleobj[i].getComponent(cc.Sprite).spriteFrame = data;
                 roleobj[i].getComponent(cc.Button).clickEvents[0]["customEventData"] = CG['INIT_SELECT_ROLEID'][index];
 
-
+                cc.log(CG['INIT_SELECT_ROLEID'][index]);
                 if(index==0){
                     self.setConfirmRoleinfo(CG['INIT_SELECT_ROLEID'][index]);
                 }
@@ -54,16 +54,12 @@ cc.Class({
     setConfirmRoleinfo(roleid){
         var self = this,
             CG = cc.vv.CG;
-        
-        cc.loader.loadRes('textures/images/Role/'+CG.ROLE_JSON[roleid]['img'], cc.SpriteFrame, function (err, data) {
-            if (err) {
-                cc.error(err.message || err);
-                return;
-            }
-            self.confirm_Role.getComponent(cc.Sprite).spriteFrame = data;
-        }); 
-        self.Role_info.string = CG.ROLE_JSON[roleid]["info"]
-        this.initShowRoleID = roleid;
+
+            cc.vv.PublicUI.create_Role(roleid,self.confirm_Role,{
+                "playTimes":0
+            });
+            self.Role_info.string = CG.ROLE_JSON[roleid]["info"]
+            this.initShowRoleID = roleid;
     },
 
     onRoles(e,type){
@@ -83,7 +79,7 @@ cc.Class({
                 if(data["code"]=='0'){
                     cc.vv.Userinfo["uname"] =  data["uname"];
                     cc.vv.Userinfo["role"] =  data["role"];
-                    cc.director.loadScene("GameMain");
+                    cc.director.loadScene("Loading");
                 }else{
                     cc.vv.PublicUI.create_SelectBox({
                         "txt":data.msg

@@ -12,8 +12,10 @@ cc.Class({
     onLoad () {
 
         var self = this;
-        cc.vv.PublicUI.create_Role(cc.vv.Userinfo.role,self.show_Role);
-        cc.vv.PublicUI.create_UserinfoBox();
+        cc.vv.PublicUI.create_Role(cc.vv.Userinfo.role,self.show_Role,{
+            "playTimes":0
+        });
+        cc.vv.PublicUI.create_UserinfoBox(false);
     },
     onLoadScene(e,eventid){
 

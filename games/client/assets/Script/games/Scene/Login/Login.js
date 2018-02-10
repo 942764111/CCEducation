@@ -103,7 +103,7 @@ cc.Class({
      */
     loadScene(){
         if(cc.vv.Userinfo["uname"]){
-            cc.director.loadScene("GameMain");
+            cc.director.loadScene("Loading");
         }else{
             cc.director.loadScene("SelectRolebg");
         }

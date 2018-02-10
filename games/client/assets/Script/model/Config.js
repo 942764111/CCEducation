@@ -1,19 +1,6 @@
 var CG = CG || {};
 var GN = require("public");
 
-//background 游戏中得背景
-CG.BGIMG = {
-    "001":{"id":"001","path":""},
-    "002":{"id":"001","path":""},
-    "003":{"id":"001","path":""},
-    "004":{"id":"001","path":""},
-    "005":{"id":"001","path":""},
-    "007":{"id":"001","path":""},
-    "008":{"id":"001","path":""}
-}
-
-
-
 /**
  * 每一关对话逻辑处理配置表
  * 
@@ -23,21 +10,22 @@ CG.BGIMG = {
  * failureNextID : 失败以后玩家的下一步执行ID 参见 plant json
  */
 CG.DIALOG_CONSTANT = {
-    "callback_1_1":{"index":0,"Maxindex":3,"random_scope":[
-        "1,3",
-        "4,17"
-    ]},
-    "callback_1_2":{"index":0,"Maxindex":3,"winNextID":19,"failureNextID":17},
-    "callback_1_3":{"index":0,"Maxindex":3,"winNextID":27,"failureNextID":26},
-    "callback_1_4":{"index":0,"Maxindex":3,"winNextID":35,"failureNextID":34},
-    "callback_1_5":{"index":0,"Maxindex":3,"winNextID":43,"failureNextID":42},
-    "callback_1_6":{"index":0,"Maxindex":3,"winNextID":48,"failureNextID":47},
-    "GAME_RUN_STATE":{
-        INIT : 1, // 初始化
-        RUN  : 2, // 游戏中
-        RWFEESH : 3, // 重新开始
-        OVER : 4,//游戏结束
-    }
+        "callback_1_1":{"index":0,"Maxindex":4,"random_scope":{
+                "1":[1,2,3],
+                "2":[4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+            }
+        },
+        "callback_1_2":{"index":0,"Maxindex":3,"winNextID":19,"failureNextID":17},
+        "callback_1_3":{"index":0,"Maxindex":3,"winNextID":27,"failureNextID":26},
+        "callback_1_4":{"index":0,"Maxindex":3,"winNextID":35,"failureNextID":34},
+        "callback_1_5":{"index":0,"Maxindex":3,"winNextID":43,"failureNextID":42},
+        "callback_1_6":{"index":0,"Maxindex":3,"winNextID":48,"failureNextID":47},
+        "GAME_RUN_STATE":{
+            INIT : 1, // 初始化
+            RUN  : 2, // 游戏中
+            RWFEESH : 3, // 重新开始
+            OVER : 4,//游戏结束
+        }
 }
 
 /**
@@ -120,6 +108,14 @@ CG.INIT_JSON = function(){
     });
 
     //====================game_1_4 end
+
+
+    /**
+     *  loadingtips    tips  
+     */
+    GN.Obj.getFileJSON("loadingtips.json",function(data){
+        CG.TIPS_JSON = data;
+    });
 
 
 

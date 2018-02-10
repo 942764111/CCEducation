@@ -168,6 +168,31 @@ app.get('/updatePlantindex',function(req,res){
     });
 });
 
+//获取用户关卡索引ID
+app.get('/plantpassindex',function(req,res){
+    var account = req.query.account;
+   var sign = req.query.sign;
+    //判断是否为空
+    if(account == "" || sign ==""){
+        send(res,{code : 1 ,msg :"account or password is null"});
+        return;
+    }
+
+    // //验证用户秘钥
+    var mysign = crypto.md5(account + req.ip + config.ACCOUNT_KEY);
+    if(mysign!=sign){
+        send(res,{code : 1 ,msg :"the sign is error"});
+        return;
+    }
+    userLogic.getPlantpassindex(account,function(data){
+        if(!data){
+            send(res,{code : 1, msg : "get Plantpassindex happened error"});
+            return;
+        }
+            send(res,{code : 0, msg : "ok",sign : data});
+    });
+});
+
 
 
 

@@ -1,7 +1,6 @@
 {
   "ver": "1.2.4",
   "uuid": "198b5155-1941-4978-92d6-8e61fb7279ed",
-  "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
   "size": {
     "width": 912,
     "height": 212
@@ -11,7 +10,6 @@
     "ammo-infinite.png": {
       "ver": "1.0.3",
       "uuid": "889d3138-0f5a-4e20-b0d7-d87790ef50a1",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -33,7 +31,6 @@
     "bomb-button-frame.png": {
       "ver": "1.0.3",
       "uuid": "82d86b1e-0be3-4aa4-ab83-e06378b3c02d",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -55,7 +52,6 @@
     "button-pause.png": {
       "ver": "1.0.3",
       "uuid": "12c65551-765a-453d-ad02-875b84a5a31e",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -77,7 +73,6 @@
     "dummy-weaponimage.png": {
       "ver": "1.0.3",
       "uuid": "4a1c7ab7-498a-44d4-8b47-0180ef1d57d5",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -99,7 +94,6 @@
     "heart-half.png": {
       "ver": "1.0.3",
       "uuid": "097117c4-8081-4140-9c38-fcc8613f49b9",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -121,7 +115,6 @@
     "heart-slot.png": {
       "ver": "1.0.3",
       "uuid": "1c6eccde-c362-48f1-9828-49f1638aa244",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -143,7 +136,6 @@
     "heart-whole.png": {
       "ver": "1.0.3",
       "uuid": "707e689c-32b7-48ec-a804-f1de8cac4f57",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -165,7 +157,6 @@
     "icon-ingameui-chest.png": {
       "ver": "1.0.3",
       "uuid": "e472061b-b2e3-4102-9ccd-c848c77d05b6",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -187,7 +178,6 @@
     "icon-ingameui-coin.png": {
       "ver": "1.0.3",
       "uuid": "57e1892f-9ee3-497f-85e5-2a9962188039",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -209,7 +199,6 @@
     "icon-ingameui-portaltimer.png": {
       "ver": "1.0.3",
       "uuid": "19579d8f-9e74-4a79-a668-0347a684933c",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -231,7 +220,6 @@
     "icon-ingameui-weapon.png": {
       "ver": "1.0.3",
       "uuid": "3f1be7e6-acf1-457f-8402-00a20da1bd32",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -253,7 +241,6 @@
     "icon-life.png": {
       "ver": "1.0.3",
       "uuid": "4aa91f47-d641-4fd7-8325-34d815510796",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -275,7 +262,6 @@
     "icon-treasureroom-lintel.png": {
       "ver": "1.0.3",
       "uuid": "44a36fae-23e3-4ce1-96e1-85ce5440dd11",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -297,7 +283,6 @@
     "ingame-cardframe.png": {
       "ver": "1.0.3",
       "uuid": "fa2496b1-7a2a-47ac-b278-2c6f2fe28776",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -319,7 +304,6 @@
     "number-props-backgrond.png": {
       "ver": "1.0.3",
       "uuid": "76f59d69-4846-4ff3-a14c-cf52e3610339",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -341,7 +325,6 @@
     "pad-left.png": {
       "ver": "1.0.3",
       "uuid": "957d8b14-4a22-49da-9896-dc26c0540ec1",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -363,7 +346,6 @@
     "pad-right.png": {
       "ver": "1.0.3",
       "uuid": "11e67b53-55ab-4480-9810-f8221baf72a8",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -385,7 +367,6 @@
     "rightstick.png": {
       "ver": "1.0.3",
       "uuid": "00e084f4-6dbe-4130-8d0d-d803792a0d5d",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -407,7 +388,6 @@
     "shootbutton.png": {
       "ver": "1.0.3",
       "uuid": "bee4c5a1-8dbf-4568-a7a3-dd2c042976c2",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -429,7 +409,6 @@
     "thumbstick.png": {
       "ver": "1.0.3",
       "uuid": "f40ba279-983e-4988-83a2-b1af828777c3",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -451,7 +430,6 @@
     "tut-portaltimer.png": {
       "ver": "1.0.3",
       "uuid": "d5fc700d-a298-4bc0-a82f-1f42ea5994a5",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -473,7 +451,6 @@
     "weapon-type-frame.png": {
       "ver": "1.0.3",
       "uuid": "a524b2c2-0677-499e-9d2d-10de7838e144",
-      "rawTextureUuid": "93a96f31-3580-486e-a553-76a8c11f9608",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

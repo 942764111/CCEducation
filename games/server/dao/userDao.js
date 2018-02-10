@@ -58,6 +58,29 @@ exports.updatePlantindex = function(plantindex,plantpassindex,account, callback)
 };
 
 
+exports.getPlantpassindex = function(account, callback){
+    callback = callback == null ? nop : callback;
+    if(account == null){
+        callback(null);
+        return;
+    }
+    var sql = 'select  plantpassindex FROM user where account = "'+account+'"';
+    db.query(sql,function(err,rows,fields){
+        if(err){
+                if(err.code == 'ER_DUP_ENTRY'){
+                    callback(false);
+                    return;
+                }
+                callback(null);
+                throw err;
+        }else{
+            callback(rows[0]);
+        }
+       
+    })
+};
+
+
 //创建一个用户
 exports.createAccount = function(account,password, callback){
     callback = callback == null ? nop : callback;

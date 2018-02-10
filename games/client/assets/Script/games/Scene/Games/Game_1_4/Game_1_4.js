@@ -29,13 +29,21 @@ cc.Class({
             type: cc.Label,
             displayName:"密码文本框",
             tooltip:"密码文本框"
+        },
+        pageview: {
+            default: null,
+            type: cc.ScrollView,
+            displayName:"新手引导节点",
+            tooltip:"新手引导节点"
         }
-
     },
-
+    onGameStart(){
+        this.pageview.node.destroyAllChildren();
+        this.pageview.node.destroy();
+        this._F_gameStateControl();
+    },
     onLoad () {
         cc.vv.CG.DIALOG_CONSTANT["callback_1_4"].index+=1;
-       this. _F_gameStateControl();
     },
     _F_gameStateControl(State){
         var self = this;

@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "backgrund_1",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 8,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "scaleX": [
+        {
+          "frame": 4,
+          "value": 1
+        },
+        {
+          "frame": 8,
+          "value": 2
+        }
+      ],
+      "scaleY": [
+        {
+          "frame": 4,
+          "value": 1
+        },
+        {
+          "frame": 8,
+          "value": 2
+        }
+      ],
+      "opacity": [
+        {
+          "frame": 0,
+          "value": 100
+        },
+        {
+          "frame": 4,
+          "value": 255
+        },
+        {
+          "frame": 8,
+          "value": 100
+        }
+      ]
+    }
+  },
+  "events": []
+}

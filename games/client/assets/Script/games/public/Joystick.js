@@ -107,7 +107,7 @@ cc.Class({
 
             var w_pos = event.getLocation(); // 获取触摸屏的世界坐标
             // 将这个世界坐标，转成我们当前这个节点的节点相对坐标。
-            var pos = this.node.convertToNodeSpace(w_pos); // pos
+            var pos = this.node.convertToNodeSpaceAR(w_pos); // pos
 
             joystick._startPos = pos;
             // end
@@ -118,7 +118,7 @@ cc.Class({
             // 触摸移动的事件
             var w_pos = event.getLocation(); // 获取触摸屏的世界坐标
             // 将这个世界坐标，转成我们当前这个节点的节点相对坐标。
-            var pos = this.node.convertToNodeSpace(w_pos); // pos
+            var pos = this.node.convertToNodeSpaceAR(w_pos); // pos
 
             var distance = this._getDistance(pos, event.target);
 

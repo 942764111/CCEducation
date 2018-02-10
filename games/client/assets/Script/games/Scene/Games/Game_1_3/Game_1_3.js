@@ -28,10 +28,20 @@ cc.Class({
             displayName:"工具箱中物品最大列",
             tooltip:"工具箱中物品最大列"
         },
+        pageview: {
+            default: null,
+            type: cc.ScrollView,
+            displayName:"新手引导节点",
+            tooltip:"新手引导节点"
+        }
+    },
+    onGameStart(){
+        this.pageview.node.destroyAllChildren();
+        this.pageview.node.destroy();
+        this._F_gameStateControl();
     },
     onLoad () {
         cc.vv.CG.DIALOG_CONSTANT["callback_1_3"].index+=1;
-        this._F_gameStateControl();
     },
     _F_gameStateControl(State){
         var self = this;

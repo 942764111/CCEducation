@@ -5,7 +5,8 @@
     properties: {
         _get_SelectBox_Instance : false,
         _get_DialogBox_Instance : false,
-        _get_UserinfoBox_Instance : false
+        _DialogBox_isLocal      : false,
+        _get_UserinfoBox_Instance : false,
     }
     /**
      * 弹出框接口
@@ -67,6 +68,8 @@
                 var getdialogBoxNode = cc.instantiate(prefab);
                 var getdialogBox = getdialogBoxNode.getComponent("dialogBox");
                 self._get_DialogBox_Instance = getdialogBox;
+
+                cc.vv.Userinfo["plantpassindex"] = DialogBoxID;
                 getdialogBox.setInfo(DialogBoxID);
                 cc.director.getScene().getChildByName('Canvas').addChild(getdialogBoxNode);
             });
@@ -87,7 +90,7 @@
                     return;
                 }
                 var prefab = cc.instantiate(prefab);
-                cc.director.getScene().getChildByName('Canvas').getChildByName("Node").addChild(prefab);
+                cc.director.getScene().getChildByName('Canvas').addChild(prefab);
             });
     }
 
@@ -96,8 +99,12 @@
      * 创建角色    对图片和骨骼做了外观模式封装
      * 
      */
-    ,create_Role(roleID,roleNode){
-        if(roleNode.RecordroleID&&roleID==roleNode.RecordroleID&&roleNode.RecordroleNode&&roleNode.RecordroleNode==roleNode)return;
+    ,create_Role(roleID,roleNode,args,CallBack){
+        if(roleNode.RecordroleID&&roleID==roleNode.RecordroleID
+            &&roleNode.RecordroleNode&&roleNode.RecordroleNode==roleNode){
+            CallBack&&CallBack(roleNode.Recordrolesprite);
+            return;
+        }
       
         var self = this,sprite;  
         if(cc.vv.CG.ROLE_JSON[roleID]['db']){
@@ -106,12 +113,17 @@
                 sprite =  roleNode.getComponent(dragonBones.ArmatureDisplay);  
             }else{
                 if(roleNode.getComponent(cc.Sprite)){
-                    roleNode.removeComponent(cc.Sprite);
+                    roleNode.getComponent(cc.Sprite)._destroyImmediate();
+                    //临时
+                    if(roleNode.getComponent(cc.Animation)){
+                        roleNode.getComponent(cc.Animation)._destroyImmediate();
+                    }
+
                 }
                 sprite =  roleNode.addComponent(dragonBones.ArmatureDisplay);  
             }
 
-            cc.loader.loadResDir('adminClips/roleAdminClips/'+cc.vv.CG.ROLE_JSON[roleID]['db'], function(err, assets){  
+           cc.loader.loadResDir('adminClips/roleAdminClips/'+cc.vv.CG.ROLE_JSON[roleID]['db'], function(err, assets){  
                 if(err){  
                     return;  
                 }  
@@ -127,13 +139,19 @@
                         if(assets[i] instanceof dragonBones.DragonBonesAtlasAsset){  
                             sprite.dragonAtlasAsset  = assets[i];  
                         }  
-                    }  
-                    
-                    sprite.armatureName = cc.vv.CG.ROLE_JSON[roleID]['name'];  
-                    sprite.playAnimation('idle'); 
+                    }
+                    if(roleID.toString()=="3"){
+                        sprite.armatureName = "Armature"; 
+                    }else{
+                        sprite.armatureName = cc.vv.CG.ROLE_JSON[roleID]['name']; 
+                    }
+                    sprite.playAnimation('idle',args["playTimes"]); 
+
                     //记录精灵纹理ID和node节点避免多次调用此函数 
                     roleNode.RecordroleID  = roleID;
                     roleNode.RecordroleNode  = roleNode;
+                    roleNode.Recordrolesprite = sprite;
+                    CallBack&&CallBack(sprite);
                 } catch (error) {
                     
                 }
@@ -144,18 +162,43 @@
                 sprite =  roleNode.getComponent(cc.Sprite);  
             }else{
                 if(roleNode.getComponent(dragonBones.ArmatureDisplay)){
-                    roleNode.removeComponent(dragonBones.ArmatureDisplay);
+                    roleNode.getComponent(dragonBones.ArmatureDisplay)._destroyImmediate();
                 }
                 sprite =  roleNode.addComponent(cc.Sprite);  
             }
-
             cc.loader.loadRes('textures/images/Role/'+cc.vv.CG.ROLE_JSON[roleID]['img'], cc.SpriteFrame, function (err, data) {
                 if (err) {
                     cc.error(err.message || err);
                     return;
                 }
                 try {
-                    sprite.getComponent(cc.Sprite).spriteFrame = data;
+                    sprite.spriteFrame = data;
+                    sprite.sizeMode = cc.Sprite.SizeMode.RAW;
+                    sprite.trim = false;
+                    roleNode.RecordroleID  = roleID;
+                    roleNode.RecordroleNode  = roleNode;
+                    roleNode.Recordrolesprite = sprite;
+
+                    CallBack&&CallBack(sprite);
+
+
+                    //临时
+                    if(roleID.toString()=="2"){
+
+                        if(roleNode.getComponent(cc.Animation)){
+                            sprite =  roleNode.getComponent(cc.Animation);  
+                        }else{
+                            sprite =  roleNode.addComponent(cc.Animation);  
+                        }
+ 
+                        cc.loader.loadRes('adminClips/roleAdminClips/002/002', function (err, data) {
+                            sprite.addClip(data,"idle");
+                            sprite.playOnLoad = true;
+                            sprite.play("idle");
+                        })
+                    }
+
+                    
                 } catch (error) {
                     
                 }

@@ -55,6 +55,26 @@ exports.updatePlantindex = function(plantindex,plantpassindex,account, callback)
 
 };
 
+
+//获取用户关卡索引ID
+exports.getPlantpassindex = function(account, callback){
+    callback = callback == null ? nop : callback;
+    if(account == null){
+        callback(null);
+        return;
+    }
+
+    userDao.getPlantpassindex(account,function(suc){
+        if(suc){
+            callback(suc); 
+        }else{
+            callback(false); 
+        }
+    });
+
+};
+
+
 //创建一个用户
 exports.createAccount = function(account,password, callback){
     callback = callback == null ? nop : callback;

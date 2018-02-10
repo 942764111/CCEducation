@@ -13,7 +13,7 @@ cc.Class({
     },
 
     onLoad(){
-        cc.vv.PublicUI.create_UserinfoBox();
+        cc.vv.PublicUI.create_UserinfoBox(false);
     },
     onStarClick(e,t){
        this.selectBox.active = true;
@@ -24,10 +24,19 @@ cc.Class({
                      ,self = this;
 
         function btn_1() {
-            cc.vv.PublicUI.create_DialogBox(cc.vv.Userinfo["plantpassindex"]);
+
+            cc.vv.Userinfo.getPlantpassindex(function(data){
+                //   cc.vv.PublicUI._DialogBox_isLocal  是否为本地模式   临时处理
+                cc.vv.PublicUI._DialogBox_isLocal = false;
+                cc.vv.PublicUI.create_DialogBox(data["plantpassindex"]);
+            })
+            self.selectBox.active = false;
+
         }
         function btn_2() {
-            cc.vv.PublicUI.create_DialogBox(cc.vv.Userinfo["plantpassindex"]);
+            cc.vv.PublicUI._DialogBox_isLocal = true;
+            cc.vv.PublicUI.create_DialogBox(1);
+            self.selectBox.active = false;
         }
         function btn_3() {
             self.selectBox.active = false;

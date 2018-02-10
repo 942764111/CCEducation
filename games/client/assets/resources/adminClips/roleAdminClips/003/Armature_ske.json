@@ -1,0 +1,1401 @@
+{
+	"frameRate": 24,
+	"armature": [{
+		"bone": [{
+			"name": "root",
+			"transform": {
+				
+			}
+		},
+		{
+			"transform": {
+				"y": -47,
+				"x": -169
+			},
+			"name": "左眼3",
+			"parent": "root"
+		},
+		{
+			"length": 653,
+			"transform": {
+				"skY": -86.4018,
+				"y": 301,
+				"skX": -86.4018,
+				"x": 5
+			},
+			"parent": "root",
+			"name": "整体"
+		},
+		{
+			"length": 309,
+			"transform": {
+				"skY": 7.2034,
+				"y": -0.3046,
+				"skX": 7.2034,
+				"x": 307.5872
+			},
+			"parent": "整体",
+			"name": "脑袋"
+		},
+		{
+			"length": 214,
+			"transform": {
+				"skY": -174.2236,
+				"y": -24.7027,
+				"skX": -174.2236,
+				"x": 329.0984
+			},
+			"parent": "整体",
+			"name": "身体"
+		},
+		{
+			"length": 181,
+			"transform": {
+				"skY": -60.2688,
+				"y": -84.683,
+				"skX": -60.2688,
+				"x": 48.9978
+			},
+			"parent": "脑袋",
+			"name": "翅膀"
+		},
+		{
+			"length": 28,
+			"transform": {
+				"skY": -170.4785,
+				"y": 43.4466,
+				"skX": -170.4785,
+				"x": 33.7401
+			},
+			"parent": "脑袋",
+			"name": "嘴"
+		},
+		{
+			"length": 72,
+			"transform": {
+				"skY": -2.8945,
+				"y": -21.1126,
+				"skX": -2.8945,
+				"x": 51.964
+			},
+			"parent": "脑袋",
+			"name": "左眼1"
+		},
+		{
+			"length": 64,
+			"transform": {
+				"skY": -1.0492,
+				"y": 93.5365,
+				"skX": -1.0492,
+				"x": 64.6755
+			},
+			"parent": "脑袋",
+			"name": "右眼"
+		},
+		{
+			"length": 159,
+			"transform": {
+				"skY": 137.809,
+				"y": -130.9363,
+				"skX": 137.809,
+				"x": 300.4344
+			},
+			"parent": "身体",
+			"name": "右腿1"
+		},
+		{
+			"length": 338,
+			"transform": {
+				"skY": 1.4703,
+				"y": -17.3903,
+				"skX": 1.4703,
+				"x": -36.9131
+			},
+			"parent": "脑袋",
+			"name": "头盔"
+		},
+		{
+			"length": 175,
+			"transform": {
+				"skY": 1.6956,
+				"y": 16.403,
+				"skX": 1.6956,
+				"x": 29.5668
+			},
+			"parent": "身体",
+			"name": "身体1"
+		},
+		{
+			"length": 182,
+			"transform": {
+				"skY": 30.5113,
+				"y": 51.2264,
+				"skX": 30.5113,
+				"x": 64.2017
+			},
+			"parent": "身体",
+			"name": "左手"
+		},
+		{
+			"length": 128,
+			"transform": {
+				"skY": -138.0345,
+				"y": -113.4688,
+				"skX": -138.0345,
+				"x": 85.6612
+			},
+			"parent": "身体",
+			"name": "右手"
+		},
+		{
+			"length": 90,
+			"transform": {
+				"skY": -63.394,
+				"y": -53.6837,
+				"skX": -63.394,
+				"x": 48.9087
+			},
+			"parent": "身体",
+			"name": "右臂"
+		},
+		{
+			"length": 160,
+			"transform": {
+				"skY": 152.8977,
+				"y": -15.4128,
+				"skX": 152.8977,
+				"x": 322.0405
+			},
+			"parent": "身体",
+			"name": "左腿1"
+		},
+		{
+			"length": 130,
+			"transform": {
+				"skY": -150.1527,
+				"y": -88.1792,
+				"skX": -150.1527,
+				"x": 8.6273
+			},
+			"parent": "脑袋",
+			"name": "头发 1"
+		}],
+		"type": "Armature",
+		"frameRate": 24,
+		"animation": [{
+			"duration": 24,
+			"frame": [],
+			"ik": [],
+			"bone": [{
+				"frame": [{
+					"duration": 24,
+					"transform": {
+						
+					}
+				}],
+				"name": "root"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"scX": 0.9839
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "整体"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"skY": -10.9855,
+						"skX": -10.9855
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "脑袋"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						
+					}
+				}],
+				"name": "身体"
+			},
+			{
+				"frame": [{
+					"duration": 10,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 1,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 1,
+					"transform": {
+						"scX": 0.8595
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 2,
+					"curve": [0,
+					0,
+					0.17846097560975616,
+					-0.2793409638554216,
+					0.44250697560975616,
+					-0.015294963855421617,
+					0.6766609756097561,
+					0.21885903614457836,
+					1,
+					1],
+					"transform": {
+						"scX": 0.9063
+					}
+				},
+				{
+					"duration": 10,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "左眼1"
+			},
+			{
+				"frame": [{
+					"duration": 9,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 3,
+					"transform": {
+						"skY": -7.0425,
+						"skX": -7.0425
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"skY": -9.0057,
+						"skX": -9.0057
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "翅膀"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					}
+				},
+				{
+					"duration": 12,
+					"transform": {
+						
+					}
+				}],
+				"name": "头盔"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					}
+				},
+				{
+					"duration": 12,
+					"transform": {
+						
+					}
+				}],
+				"name": "右眼"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"skY": 9.9006,
+						"skX": 9.9006
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "左手"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"skY": 14.6183,
+						"y": -0.6225,
+						"skX": 14.6183,
+						"x": -3.9035
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "右手"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						"skY": -2.3919,
+						"skX": -2.3919
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"skY": -8.25,
+						"skX": -8.25
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						"skY": -2.3919,
+						"skX": -2.3919
+					}
+				}],
+				"name": "右臂"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"scX": 1.1892
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "嘴"
+			},
+			{
+				"frame": [{
+					"duration": 24,
+					"transform": {
+						
+					}
+				}],
+				"name": "身体1"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"skY": -3.9266,
+						"skX": -3.9266
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "左腿1"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"skY": -3.0553,
+						"skX": -3.0553
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "右腿1"
+			},
+			{
+				"frame": [{
+					"duration": 24,
+					"transform": {
+						
+					}
+				}],
+				"name": "左眼3"
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"transform": {
+						
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"transform": {
+						"skY": 15.9058,
+						"skX": 15.9058
+					},
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"transform": {
+						
+					}
+				}],
+				"name": "头发 1"
+			}],
+			"slot": [{
+				"frame": [{
+					"tweenEasing": null,
+					"duration": 10
+				},
+				{
+					"tweenEasing": null,
+					"duration": 2
+				},
+				{
+					"tweenEasing": null,
+					"duration": 1,
+					"displayIndex": 2
+				},
+				{
+					"tweenEasing": null,
+					"duration": 1,
+					"displayIndex": 1
+				},
+				{
+					"tweenEasing": null,
+					"duration": 10
+				},
+				{
+					"tweenEasing": null,
+					"duration": 0
+				}],
+				"name": "左眼1"
+			}],
+			"playTimes": 0,
+			"name": "idle",
+			"ffd": [{
+				"frame": [{
+					"duration": 12,
+					"offset": 6,
+					"vertices": [3.75,
+					-0.12,
+					0,
+					0],
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"offset": 0,
+					"vertices": [-12.59,
+					-1.21,
+					0,
+					0,
+					-33.75,
+					-10.89,
+					-10.98,
+					0.97,
+					0,
+					0],
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"offset": 6,
+					"vertices": [3.75,
+					-0.12,
+					0,
+					0],
+					"tweenEasing": null
+				}],
+				"offset": 0,
+				"scale": 1,
+				"slot": "身体",
+				"name": "粉小爱/身体",
+				"skin": ""
+			},
+			{
+				"frame": [{
+					"duration": 12,
+					"offset": 11,
+					"vertices": [1,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0],
+					"tweenEasing": 0
+				},
+				{
+					"duration": 12,
+					"offset": 4,
+					"vertices": [-14.32,
+					-11.55,
+					0,
+					0,
+					-11.89,
+					-0.74,
+					-2.19,
+					-6.15,
+					-3.27,
+					-7.38,
+					-0.89,
+					-12.78,
+					11.58,
+					-2.34,
+					-0.56,
+					4.63,
+					0,
+					0,
+					0,
+					0,
+					-5.46,
+					2.35,
+					-1.2,
+					3.21,
+					1.45,
+					5.57,
+					0,
+					0,
+					0,
+					0,
+					-11.15,
+					6.9,
+					-3.3,
+					5.47,
+					2.67,
+					-0.52,
+					5.54,
+					-3.96,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0],
+					"tweenEasing": 0
+				},
+				{
+					"duration": 0,
+					"offset": 11,
+					"vertices": [1,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0],
+					"tweenEasing": null
+				}],
+				"offset": 0,
+				"scale": 1,
+				"slot": "头发 1",
+				"name": "头发 1",
+				"skin": ""
+			}]
+		}],
+		"ik": [],
+		"slot": [{
+			"color": {
+				
+			},
+			"name": "头发 1",
+			"parent": "头发 1"
+		},
+		{
+			"z": 1,
+			"color": {
+				
+			},
+			"name": "右腿",
+			"parent": "右腿1"
+		},
+		{
+			"z": 2,
+			"color": {
+				
+			},
+			"name": "左腿",
+			"parent": "左腿1"
+		},
+		{
+			"z": 3,
+			"color": {
+				
+			},
+			"name": "右臂",
+			"parent": "右臂"
+		},
+		{
+			"z": 4,
+			"color": {
+				
+			},
+			"name": "右手",
+			"parent": "右手"
+		},
+		{
+			"z": 5,
+			"color": {
+				
+			},
+			"name": "身体",
+			"parent": "身体1"
+		},
+		{
+			"z": 6,
+			"color": {
+				
+			},
+			"name": "左手",
+			"parent": "左手"
+		},
+		{
+			"z": 7,
+			"color": {
+				
+			},
+			"name": "头",
+			"parent": "脑袋"
+		},
+		{
+			"z": 8,
+			"color": {
+				
+			},
+			"name": "左眼1",
+			"parent": "左眼1"
+		},
+		{
+			"z": 9,
+			"color": {
+				
+			},
+			"name": "嘴",
+			"parent": "嘴"
+		},
+		{
+			"z": 10,
+			"color": {
+				
+			},
+			"name": "右眼",
+			"parent": "右眼"
+		},
+		{
+			"z": 11,
+			"color": {
+				
+			},
+			"name": "头盔",
+			"parent": "头盔"
+		},
+		{
+			"z": 12,
+			"color": {
+				
+			},
+			"name": "翅膀",
+			"parent": "翅膀"
+		},
+		{
+			"z": 13,
+			"color": {
+				
+			},
+			"name": "左眼11",
+			"parent": "左眼1",
+			"displayIndex": -1
+		},
+		{
+			"z": 14,
+			"color": {
+				
+			},
+			"name": "头1",
+			"parent": "root",
+			"displayIndex": -1
+		}],
+		"defaultActions": [{
+			"gotoAndPlay": "idle"
+		}],
+		"name": "Armature",
+		"aabb": {
+			"width": 468,
+			"y": -296.7500000000001,
+			"height": 595.75,
+			"x": -234.99999999999994
+		},
+		"skin": [{
+			"name": "",
+			"slot": [{
+				"display": [{
+					"path": "粉小爱/右臂",
+					"type": "image",
+					"name": "粉小爱/右臂",
+					"transform": {
+						"skY": -35.9807,
+						"y": -0.3658,
+						"skX": -35.9807,
+						"x": 47.3114
+					}
+				}],
+				"name": "右臂"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/右腿",
+					"type": "image",
+					"name": "粉小爱/右腿",
+					"transform": {
+						"skY": 122.8163,
+						"y": 1.508,
+						"skX": 122.8163,
+						"x": 78.4529
+					}
+				}],
+				"name": "右腿"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/翅膀",
+					"type": "image",
+					"name": "粉小爱/翅膀",
+					"transform": {
+						"skY": 139.4672,
+						"y": 6.5099,
+						"skX": 139.4672,
+						"x": 92.4047
+					}
+				}],
+				"name": "翅膀"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/右手",
+					"type": "image",
+					"name": "粉小爱/右手",
+					"transform": {
+						"skY": 38.6598,
+						"y": 11.8692,
+						"skX": 38.6598,
+						"x": 72.4646
+					}
+				}],
+				"name": "右手"
+			},
+			{
+				"display": [{
+					"width": 170,
+					"height": 151,
+					"type": "mesh",
+					"vertices": [-85,
+					-75.5,
+					85,
+					-75.5,
+					-85,
+					75.5,
+					85,
+					75.5,
+					3.05,
+					-10.95,
+					-33.95,
+					-21.95,
+					-54.95,
+					-9.95,
+					-85,
+					9.05,
+					-61.95,
+					51.05,
+					-22.95,
+					15.05,
+					-9.95,
+					40.05,
+					-35.95,
+					75.5,
+					18.05,
+					-21.95,
+					24.05,
+					-12.95,
+					36.05,
+					-3.95,
+					50.05,
+					0.05,
+					-1.95,
+					-75.5,
+					8.05,
+					-51.95,
+					18.05,
+					-40.95,
+					-25.95,
+					-7.95,
+					-56.95,
+					26.05,
+					-34.95,
+					49.05,
+					1.05,
+					55.05,
+					-48.95,
+					2.05],
+					"transform": {
+						"skY": -130.6489,
+						"y": 15.4249,
+						"skX": -130.6489,
+						"x": 57.3313
+					},
+					"edges": [1,
+					3,
+					2,
+					7,
+					7,
+					0,
+					3,
+					11,
+					11,
+					2,
+					0,
+					16,
+					16,
+					1],
+					"path": "头发 1",
+					"userEdges": [],
+					"uvs": [0,
+					0,
+					1,
+					0,
+					0,
+					1,
+					1,
+					1,
+					0.51794,
+					0.42748,
+					0.30029,
+					0.35464,
+					0.17676,
+					0.43411,
+					0,
+					0.55993,
+					0.13559,
+					0.83808,
+					0.365,
+					0.59967,
+					0.44147,
+					0.76523,
+					0.28853,
+					1,
+					0.60618,
+					0.35464,
+					0.64147,
+					0.41424,
+					0.71206,
+					0.47384,
+					0.79441,
+					0.50033,
+					0.48853,
+					0,
+					0.54735,
+					0.15596,
+					0.60618,
+					0.22881,
+					0.34735,
+					0.44735,
+					0.165,
+					0.67252,
+					0.29441,
+					0.82483,
+					0.50618,
+					0.86457,
+					0.21206,
+					0.51358],
+					"name": "头发 1",
+					"triangles": [18,
+					14,
+					15,
+					17,
+					18,
+					1,
+					16,
+					17,
+					1,
+					18,
+					15,
+					1,
+					22,
+					11,
+					3,
+					15,
+					22,
+					3,
+					1,
+					15,
+					3,
+					18,
+					12,
+					13,
+					10,
+					22,
+					14,
+					18,
+					13,
+					14,
+					14,
+					22,
+					15,
+					13,
+					4,
+					14,
+					4,
+					10,
+					14,
+					9,
+					10,
+					4,
+					12,
+					4,
+					13,
+					17,
+					4,
+					18,
+					18,
+					4,
+					12,
+					19,
+					9,
+					4,
+					5,
+					19,
+					4,
+					5,
+					4,
+					17,
+					16,
+					5,
+					17,
+					10,
+					21,
+					22,
+					21,
+					11,
+					22,
+					0,
+					5,
+					16,
+					9,
+					21,
+					10,
+					20,
+					21,
+					9,
+					23,
+					20,
+					9,
+					19,
+					23,
+					9,
+					0,
+					6,
+					5,
+					5,
+					23,
+					19,
+					20,
+					8,
+					21,
+					21,
+					8,
+					11,
+					6,
+					23,
+					5,
+					8,
+					2,
+					11,
+					0,
+					7,
+					6,
+					6,
+					7,
+					23,
+					7,
+					20,
+					23,
+					7,
+					8,
+					20,
+					7,
+					2,
+					8]
+				}],
+				"name": "头发 1"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/左腿",
+					"type": "image",
+					"name": "粉小爱/左腿",
+					"transform": {
+						"skY": 107.7276,
+						"y": -1.462,
+						"skX": 107.7276,
+						"x": 79.9937
+					}
+				}],
+				"name": "左腿"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/左手",
+					"type": "image",
+					"name": "粉小爱/左手",
+					"transform": {
+						"skY": -129.886,
+						"y": 14.1845,
+						"skX": -129.886,
+						"x": 110.9
+					}
+				}],
+				"name": "左手"
+			},
+			{
+				"display": [{
+					"path": "头",
+					"type": "image",
+					"name": "头",
+					"transform": {
+						"skY": 79.1984,
+						"y": -29.9683,
+						"skX": 79.1984,
+						"x": 131.4629
+					}
+				}],
+				"name": "头"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/右眼",
+					"type": "image",
+					"name": "粉小爱/右眼",
+					"transform": {
+						"skY": 80.2476,
+						"y": 13.7284,
+						"skX": 80.2476,
+						"x": 32.2921
+					}
+				}],
+				"name": "右眼"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/嘴",
+					"type": "image",
+					"name": "粉小爱/嘴",
+					"transform": {
+						"skY": -110.3231,
+						"y": -1.7713,
+						"skX": -110.3231,
+						"x": 10.541
+					}
+				}],
+				"name": "嘴"
+			},
+			{
+				"display": [],
+				"name": "左眼11"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/左眼1",
+					"type": "image",
+					"name": "粉小爱/左眼1",
+					"transform": {
+						"skY": 82.0928,
+						"y": -10.6203,
+						"skX": 82.0928,
+						"x": 32.8513
+					}
+				},
+				{
+					"path": "左眼2",
+					"type": "image",
+					"name": "左眼2",
+					"transform": {
+						"skY": 82.0928,
+						"y": -10.4738,
+						"skX": 82.0928,
+						"x": 33.2503
+					}
+				},
+				{
+					"path": "左眼3",
+					"type": "image",
+					"name": "左眼3",
+					"transform": {
+						"skY": 82.0928,
+						"y": -9.8134,
+						"skX": 82.0928,
+						"x": 31.2218
+					}
+				}],
+				"name": "左眼1"
+			},
+			{
+				"display": [{
+					"width": 238,
+					"height": 224,
+					"type": "mesh",
+					"vertices": [-119,
+					-112,
+					119,
+					-112,
+					-119,
+					112,
+					119,
+					112,
+					-34.53,
+					-0.31],
+					"transform": {
+						"skY": -99.2537,
+						"y": 7.3071,
+						"skX": -99.2537,
+						"x": 82.437
+					},
+					"edges": [0,
+					1,
+					1,
+					3,
+					3,
+					2,
+					2,
+					0],
+					"path": "粉小爱/身体",
+					"userEdges": [],
+					"uvs": [0,
+					0,
+					1,
+					0,
+					0,
+					1,
+					1,
+					1,
+					0.35493,
+					0.49864],
+					"name": "粉小爱/身体",
+					"triangles": [0,
+					4,
+					1,
+					1,
+					4,
+					3,
+					4,
+					2,
+					3,
+					0,
+					2,
+					4]
+				}],
+				"name": "身体"
+			},
+			{
+				"display": [],
+				"name": "头1"
+			},
+			{
+				"display": [{
+					"path": "粉小爱/头盔",
+					"type": "image",
+					"name": "粉小爱/头盔",
+					"transform": {
+						"skY": 77.728,
+						"y": -9.0482,
+						"skX": 77.728,
+						"x": 159.2149
+					}
+				}],
+				"name": "头盔"
+			}]
+		}]
+	}],
+	"isGlobal": 0,
+	"name": "Armature",
+	"version": "4.5"
+}

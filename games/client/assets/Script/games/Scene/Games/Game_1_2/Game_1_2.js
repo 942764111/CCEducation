@@ -26,14 +26,22 @@ cc.Class({
             type: cc.Float,
             displayName:"游戏正式开始时间",
             tooltip:"游戏正式开始时间"
+        },
+        pageview: {
+            default: null,
+            type: cc.ScrollView,
+            displayName:"新手引导节点",
+            tooltip:"新手引导节点"
         }
     },
     
-     
+    onGameStart(){
+        this.pageview.node.destroyAllChildren();
+        this.pageview.node.destroy();
+        this._F_gameStateControl();
+    },
     onLoad () {
         cc.vv.CG.DIALOG_CONSTANT["callback_1_2"].index+=1;
-
-        this._F_gameStateControl();
     },
     _F_gameStateControl(State,args){
         var self = this;

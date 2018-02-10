@@ -1,0 +1,7 @@
+{
+  "ver": "1.0.0",
+  "uuid": "a2538ba6-c86a-472d-b5cd-bc95609447a7",
+  "atlasJson": "{\"width\":512,\"imagePath\":\"Armature_tex.png\",\"height\":1024,\"name\":\"Armature\",\"SubTexture\":[{\"width\":170,\"y\":872,\"height\":151,\"name\":\"头发 1\",\"x\":1},{\"width\":110,\"y\":804,\"height\":144,\"name\":\"粉小爱/右腿\",\"x\":397},{\"width\":116,\"y\":332,\"height\":167,\"name\":\"粉小爱/左腿\",\"x\":308},{\"width\":87,\"y\":950,\"height\":73,\"name\":\"粉小爱/右臂\",\"x\":397},{\"width\":140,\"y\":501,\"height\":98,\"name\":\"粉小爱/右手\",\"x\":308},{\"width\":238,\"y\":646,\"height\":224,\"name\":\"粉小爱/身体\",\"x\":1},{\"width\":186,\"y\":646,\"height\":156,\"name\":\"粉小爱/左手\",\"x\":241},{\"width\":305,\"y\":332,\"height\":312,\"name\":\"头\",\"x\":1},{\"y\":83,\"frameWidth\":120,\"x\":347,\"frameHeight\":100,\"width\":103,\"frameY\":-24,\"height\":60,\"name\":\"左眼2\",\"frameX\":-6},{\"y\":601,\"frameWidth\":120,\"x\":308,\"frameHeight\":100,\"width\":94,\"frameY\":-35,\"height\":36,\"name\":\"左眼3\",\"frameX\":-13},{\"width\":102,\"y\":1,\"height\":80,\"name\":\"粉小爱/左眼1\",\"x\":347},{\"width\":60,\"y\":1,\"height\":37,\"name\":\"粉小爱/嘴\",\"x\":451},{\"width\":68,\"y\":601,\"height\":71,\"name\":\"粉小爱/右眼\",\"x\":429},{\"width\":344,\"y\":1,\"height\":329,\"name\":\"粉小爱/头盔\",\"x\":1},{\"width\":154,\"y\":804,\"height\":180,\"name\":\"粉小爱/翅膀\",\"x\":241}]}",
+  "texture": "2c3ccc26-1bb0-4eb8-bb08-d5c2c7176790",
+  "subMetas": {}
+}

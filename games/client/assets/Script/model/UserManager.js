@@ -33,9 +33,6 @@ cc.Class({
                 if(data["code"]=='0'){
                     self.plantindex = plantindex;
                     self.plantpassindex = plantpassindex;
-                    cc.vv.PublicUI.create_SelectBox({
-                        "txt":data.msg
-                    });
                 }else{
                     cc.vv.PublicUI.create_SelectBox({
                         "txt":data.msg
@@ -44,5 +41,29 @@ cc.Class({
             }
         })
 
+    },
+
+    /**
+     * 获取用户关卡索引ID
+     */
+    getPlantpassindex(CallBack){
+        var self = this;
+        var data = {
+            "account"         :  cc.vv.Userinfo["account"],
+            "sign"            :  cc.vv.Userinfo["sign"]
+        }
+        cc.vv.HTTP.sendRequest('/plantpassindex',data,function(data){
+            if(data){
+                if(data["code"]=='0'){
+                    cc.vv.Userinfo["plantpassindex"] = parseInt(data["sign"]["plantpassindex"]);
+                    CallBack&&CallBack({"plantpassindex":cc.vv.Userinfo["plantpassindex"]});
+                }else{
+                    cc.vv.PublicUI.create_SelectBox({
+                        "txt":data.msg
+                    });
+                }
+            }
+        })
     }
+
 });
