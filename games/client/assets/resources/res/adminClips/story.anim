@@ -1,0 +1,95 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "story",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 4,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "001": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                -1438,
+                267
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                -467,
+                267
+              ]
+            }
+          ]
+        }
+      },
+      "002": {
+        "props": {
+          "position": [
+            {
+              "frame": 1,
+              "value": [
+                470,
+                841
+              ]
+            },
+            {
+              "frame": 2,
+              "value": [
+                470,
+                266
+              ]
+            }
+          ]
+        }
+      },
+      "003": {
+        "props": {
+          "position": [
+            {
+              "frame": 3,
+              "value": [
+                -480,
+                -887
+              ]
+            },
+            {
+              "frame": 4,
+              "value": [
+                -470,
+                -247
+              ]
+            }
+          ]
+        }
+      },
+      "004": {
+        "props": {
+          "position": [
+            {
+              "frame": 2,
+              "value": [
+                1426,
+                -260
+              ]
+            },
+            {
+              "frame": 3,
+              "value": [
+                464,
+                -260
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

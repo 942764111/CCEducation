@@ -22,7 +22,7 @@ cc.Class({
         //获取用户分数
         cc.vv.UserScoreinfo.getAllUserScore();
     },
-    onLoadScene(e,eventid){
+    onClickEvents(e,eventid){
 
         function loadScene(scenename){
             cc.director.loadScene(scenename);
@@ -33,8 +33,19 @@ cc.Class({
                 loadScene("Explore");
                 break;
             case "figure"://人物
-           // cc.vv.PublicUI.buttonCallBack();
-
+            cc.vv.PublicUI.buttonCallBack();
+                break;
+            case "Webstars"://星网
+            cc.vv.PublicUI.buttonCallBack();
+                break;
+            case "cabin"://船舱
+            cc.vv.PublicUI.buttonCallBack();
+                break;
+            case "collect"://收藏
+            cc.vv.PublicUI.buttonCallBack();
+                break;
+            case "set_btn"://设置
+                
                 cc.loader.loadRes('res/prefab/evaluating', function (err, data) {
                     if (err) {
                         cc.error(err.message || err);
@@ -45,15 +56,6 @@ cc.Class({
                     cc.director.getScene().getChildByName('Canvas').addChild(getsEvaluatingNode);
                 });
 
-                break;
-            case "Webstars"://星网
-            cc.vv.PublicUI.buttonCallBack();
-                break;
-            case "cabin"://船舱
-            cc.vv.PublicUI.buttonCallBack();
-                break;
-            case "collect"://收藏
-            cc.vv.PublicUI.buttonCallBack();
                 break;
             default :
                 throw new Error(eventid + "not Find By  ",this.name) 

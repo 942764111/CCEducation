@@ -31,7 +31,15 @@ cc.Class({
                     callBack&&callBack();
                 }else{
                     cc.vv.PublicUI.create_SelectBox({
-                        "txt":data.msg
+                        "txt":data.msg,
+                        "CallBack": {
+                            onbtn_1CallBack : function() {
+                                cc.director.loadScene("Login");
+                            },
+                            onbtn_3CallBack : function(){
+                                cc.director.loadScene("Login");
+                            }
+                        }
                     });
                 }
             }
@@ -52,13 +60,7 @@ cc.Class({
                 if(data["code"]=='0'){
                     self[updateKey] = self[updateKey];
                     callBack&&callBack();
-                    return true;
                 }else{
-                    cc.vv.PublicUI.create_SelectBox({
-                        "txt":data.msg
-                    });
-
-                    return false;
                 }
             }
         },)

@@ -21,11 +21,11 @@ CG.DIALOG_CONSTANT = {
                 "2":[4,5,6,7,8,9,10,11,12,13,14,15,16,17]
             }
         },
-        "callback_1_2":{"index":0,"Maxindex":3,"winNextID":19,"failureNextID":17},
-        "callback_1_3":{"index":0,"Maxindex":3,"winNextID":27,"failureNextID":26},
-        "callback_1_4":{"index":0,"Maxindex":3,"winNextID":35,"failureNextID":34},
-        "callback_1_5":{"index":0,"Maxindex":3,"winNextID":43,"failureNextID":42},
-        "callback_1_6":{"index":0,"Maxindex":3,"winNextID":48,"failureNextID":47},
+        "callback_1_2":{"index":0,"Maxindex":3,"winNextID":15,"failureNextID":14},
+        "callback_1_3":{"index":0,"Maxindex":3,"winNextID":20,"failureNextID":19},
+        "callback_1_4":{"index":0,"Maxindex":3,"winNextID":26,"failureNextID":25},
+        "callback_1_5":{"index":0,"Maxindex":3,"winNextID":34,"failureNextID":33},
+        "callback_1_6":{"index":0,"Maxindex":3,"winNextID":39,"failureNextID":38},
         "GAME_RUN_STATE":{
             INIT : 1, // 初始化
             RUN  : 2, // 游戏中

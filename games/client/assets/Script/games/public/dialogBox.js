@@ -66,7 +66,7 @@ cc.Class({
         function setbg(){
             if(data[plantpassindex]["background"]){
                 cc.log(data[plantpassindex]["background"]);
-                cc.loader.loadRes('res/refab/bg/'+data[plantpassindex]["background"], function (err, prefab) {
+                cc.loader.loadRes('res/prefab/bg/'+data[plantpassindex]["background"], function (err, prefab) {
                     if (err) {
                         cc.error(err.message || err);
                         return;
@@ -285,6 +285,7 @@ cc.Class({
 
                 var getsEvaluatingNode = cc.instantiate(data);
                 cc.director.getScene().getChildByName('Canvas').addChild(getsEvaluatingNode);
+                getsEvaluatingNode.zIndex = 100;
             });
 
         }
@@ -296,16 +297,16 @@ cc.Class({
             case "callback_1_15":
                 _Callback_1_2();
                 break;     
-            case "callback_1_24":
+            case "callback_1_18":
                 _Callback_1_3();
                 break;     
-            case "callback_1_33":
+            case "callback_1_23":
                 _Callback_1_4();
                 break;   
-            case "callback_1_40":
+            case "callback_1_31":
                 _Callback_1_5();
                 break;
-            case "callback_1_46":
+            case "callback_1_37":
                 _Callback_1_6();
                 break;           
             case "Exit": //退出

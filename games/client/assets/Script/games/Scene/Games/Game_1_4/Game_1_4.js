@@ -43,6 +43,12 @@ cc.Class({
         this._F_gameStateControl();
     },
     onLoad () {
+        cc.log("callback_1_4:"+cc.vv.CG.DIALOG_CONSTANT["callback_1_4"].index);
+        if(cc.vv.CG.DIALOG_CONSTANT["callback_1_4"].index>=1){
+            this.pageview.node.active = false;
+            this._F_gameStateControl();
+        }
+
         cc.vv.CG.DIALOG_CONSTANT["callback_1_4"].index+=1;
     },
     _F_gameStateControl(State){
@@ -110,6 +116,9 @@ cc.Class({
                          case "PW":
                             URL = 'res/textures/images/game_1_4/password/pw_'+getData[getAllid[index]]["password"]+"";
                          break;
+                         case "RUNE2":
+                         URL = 'res/textures/images/game_1_4/runes2/'+getData[getAllid[index]]["img"];
+                         break;
                     }
                     cc.loader.loadRes(URL, cc.SpriteFrame, function (err, data) {
                         if (err) {
@@ -153,7 +162,7 @@ cc.Class({
 
                     
                     
-                    loaderRes("RUNE",children,getAllid,function(data,i) {
+                    loaderRes("RUNE2",children,getAllid,function(data,i) {
                         children[i].getComponent(cc.Sprite).spriteFrame = data;
                         self._RESULT+=getData[getAllid[i]]["password"];
                     })

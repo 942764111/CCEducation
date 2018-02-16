@@ -43,7 +43,7 @@ cc.Class({
 
     setinfo(){
 
-        this.epiloguetxt.getComponent(cc.Label).string = "您孩子的语言能力较弱，可以针对性的进行以下训练：常识、背数、算数"
+        this.epiloguetxt.getComponent(cc.Label).string = "[此页面为模拟数据,仅展示给家长]您孩子的语言能力较弱，可以针对性的进行以下训练：常识、背数、算数"
 
         var children = this.score_list_node.children;
         for(var i=0;i<children.length;i++){

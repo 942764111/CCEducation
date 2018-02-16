@@ -43,13 +43,9 @@ cc.Class({
 
             //场景淡出
             self.picFadeOut(function(){
-                if(cc.vv.Userinfo["uname"]){
-                    cc.director.loadScene("GameMain");
-                }else{
-                    cc.director.loadScene("SelectRolebg");
-                }
-
+                 cc.director.loadScene("Story");
             });
+            
         });
 
     },

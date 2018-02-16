@@ -21,26 +21,6 @@ cc.Class({
     onLoad () {
         cc.vv.CG.DIALOG_CONSTANT["callback_1_5"].index+=1;
         this. _F_gameStateControl();
-
-
-        // 20秒后更新分数 临时
-
-        function gametime(){
-            this.unschedule(gametime);
-            //开始减分
-            function deductionScore(){
-                if(cc.vv.UserScoreinfo["game_1_5"]>0){
-                    cc.vv.UserScoreinfo["game_1_5"]-=1;
-
-                }else{
-                    cc.vv.UserScoreinfo["game_1_5"]=0;
-                    this.unscheduleAllCallbacks();
-                }
-            }
-            this.schedule(deductionScore.bind(this),1)
-        }
-        this.scheduleOnce(gametime.bind(this),20)
-
     },
     _F_gameStateControl(State){
         var self = this;
@@ -48,6 +28,26 @@ cc.Class({
             self._F_game_init();
         }
         function run() {
+
+                        
+        // 20秒后更新分数 临时
+
+        function gametime(){
+            self.unschedule(gametime);
+            //开始减分
+            function deductionScore(){
+                if(cc.vv.UserScoreinfo["game_1_5"]>0){
+                    cc.vv.UserScoreinfo["game_1_5"]-=1;
+
+                }else{
+                    cc.vv.UserScoreinfo["game_1_5"]=0;
+                    self.unscheduleAllCallbacks();
+                }
+            }
+            self.schedule(deductionScore.bind(self),1)
+        }
+        self.scheduleOnce(gametime.bind(self),20)
+
             self._F_game_run();
         }
         function rwfeesh() {
@@ -110,6 +110,11 @@ cc.Class({
             ,tools = this._F_game_Tools()
             ,Pressitem = null
             ,winindex = 0;
+
+
+
+
+
 
         function getPressitem(touchpos) {
             var children,item;

@@ -41,6 +41,11 @@ cc.Class({
         this._F_gameStateControl();
     },
     onLoad () {
+        if(cc.vv.CG.DIALOG_CONSTANT["callback_1_3"].index>=1){
+            this.pageview.node.active = false;
+            this._F_gameStateControl();
+        }
+
         cc.vv.CG.DIALOG_CONSTANT["callback_1_3"].index+=1;
     },
     _F_gameStateControl(State){

@@ -1,0 +1,28 @@
+{
+  "appKey": "",
+  "appSecret": "",
+  "encryptJs": true,
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSDKBox": false,
+  "inlineSpriteFrames": false,
+  "inlineSpriteFrames_native": false,
+  "jailbreakPlatform": false,
+  "md5Cache": true,
+  "mergeStartScene": false,
+  "oauthLoginServer": "",
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.client",
+  "privateKey": "",
+  "renderMode": "0",
+  "startScene": "d27b42a6-fda2-4e31-846d-3de8d9bb7a77",
+  "title": "HXYX",
+  "webOrientation": "landscape",
+  "xxteaKey": "c98cb06b-8c61-4a"
+}

@@ -63,7 +63,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 58
+        "__id__": 63
       }
     ],
     "_prefab": null,
@@ -118,14 +118,14 @@
         "__id__": 33
       },
       {
-        "__id__": 56
+        "__id__": 61
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 57
+        "__id__": 62
       }
     ],
     "_prefab": null,
@@ -1072,13 +1072,16 @@
     "_children": [
       {
         "__id__": 34
+      },
+      {
+        "__id__": 55
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 55
+        "__id__": 60
       }
     ],
     "_prefab": null,
@@ -1323,7 +1326,7 @@
       "__id__": 3
     },
     "component": "GameMain",
-    "handler": "onLoadScene",
+    "handler": "onClickEvents",
     "customEventData": "collect"
   },
   {
@@ -1467,7 +1470,7 @@
       "__id__": 3
     },
     "component": "GameMain",
-    "handler": "onLoadScene",
+    "handler": "onClickEvents",
     "customEventData": "Webstars"
   },
   {
@@ -1611,7 +1614,7 @@
       "__id__": 3
     },
     "component": "GameMain",
-    "handler": "onLoadScene",
+    "handler": "onClickEvents",
     "customEventData": "cabin"
   },
   {
@@ -1755,7 +1758,7 @@
       "__id__": 3
     },
     "component": "GameMain",
-    "handler": "onLoadScene",
+    "handler": "onClickEvents",
     "customEventData": "figure"
   },
   {
@@ -1899,8 +1902,183 @@
       "__id__": 3
     },
     "component": "GameMain",
-    "handler": "onLoadScene",
+    "handler": "onClickEvents",
     "customEventData": "explore"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ser_btn",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 33
+    },
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 56
+      },
+      {
+        "__id__": 57
+      },
+      {
+        "__id__": 58
+      }
+    ],
+    "_prefab": null,
+    "_id": "35EFKAf4lDD7cRUmLI1oqj",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 99,
+      "height": 98
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -1452,
+      "y": 284
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 55
+    },
+    "_enabled": true,
+    "_spriteFrame": {
+      "__uuid__": "cfd43f4e-702c-45d0-af8b-a83d0459dc08"
+    },
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
+  },
+  {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 55
+    },
+    "_enabled": true,
+    "isAlignOnce": true,
+    "_target": {
+      "__id__": 2
+    },
+    "_alignFlags": 8,
+    "_left": 115.5,
+    "_right": 0,
+    "_top": 207,
+    "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0
+  },
+  {
+    "__type__": "cc.Button",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 55
+    },
+    "_enabled": true,
+    "transition": 3,
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 211,
+      "g": 211,
+      "b": 211,
+      "a": 255
+    },
+    "hoverColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "duration": 0.1,
+    "zoomScale": 0.8,
+    "pressedSprite": null,
+    "hoverSprite": null,
+    "clickEvents": [
+      {
+        "__id__": 59
+      }
+    ],
+    "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
+    "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 214,
+      "g": 214,
+      "b": 214,
+      "a": 255
+    },
+    "_N$disabledColor": {
+      "__type__": "cc.Color",
+      "r": 124,
+      "g": 124,
+      "b": 124,
+      "a": 255
+    },
+    "_N$normalSprite": null,
+    "_N$disabledSprite": null,
+    "_N$target": {
+      "__id__": 55
+    }
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 3
+    },
+    "component": "GameMain",
+    "handler": "onClickEvents",
+    "customEventData": "set_btn"
   },
   {
     "__type__": "cc.Widget",
@@ -1987,7 +2165,7 @@
     },
     "_enabled": true,
     "show_Role": {
-      "__id__": 56
+      "__id__": 61
     }
   },
   {
