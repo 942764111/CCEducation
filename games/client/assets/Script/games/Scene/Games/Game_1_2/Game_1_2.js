@@ -263,7 +263,7 @@ cc.Class({
                 rankindex+=1;
                 if(rankindex>=Maxrank){
                     rowindex+=1;
-                    rankindex=0;
+                    rankindex=0; 
                 }
                 index+=1;
             }

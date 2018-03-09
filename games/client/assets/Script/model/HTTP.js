@@ -38,14 +38,16 @@ var HTTP = HTTP||{
                         throw new Error(e);
                     }
                     finally{
+                        cc.log("hide");    
                         if(cc.vv && cc.vv.wc){
-                        //       cc.vv.wc.hide();    
+                            cc.log("hide");    
                         }
                     }
                 }
             };
-            
+            cc.log("show");
             if(cc.vv && cc.vv.wc){
+   
                 //cc.vv.wc.show();
             }
             xhr.send();
